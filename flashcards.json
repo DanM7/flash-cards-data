@@ -1,1029 +1,1687 @@
 {
-  "language": "en-US",
-  "home": {
-    "tagline": "Practice that fits your grade",
-    "intro": "Short practice rounds for reading, math, science, and French. Pick a grade, choose a topic, and work through shuffled cards at your own pace."
-  },
-  "multipleChoice": {
-    "secondsPerQuestion": 20,
-    "lowTimeSeconds": 5,
-    "roundSize": 10,
-    "wrongChoices": 3,
-    "scoring": { "firstTry": 10, "perWrongPick": 3, "hint": 1, "minimum": 1 },
-    "encouragement": ["Great job!", "Nice work!", "You're doing awesome!", "Way to go!", "Super!"],
-    "speech": { "rate": 0.85 }
-  },
-  "typingAndVoice": {
-    "cardsBeforeBreak": 5,
-    "breakSeconds": 2.8,
-    "encouragement": ["Great job!", "Nice work!", "You're doing awesome!", "Way to go!", "Super reading!"]
-  },
-  "geography": {
-    "nearbyCountries": 6
-  },
-  "playText": {
-    "default": {
-      "title": "Practice",
-      "promptName": "word",
-      "choiceCue": "Answer this",
-      "listenCue": "Listen, then pick what you hear",
-      "typingCue": "Say this word",
-      "finishedTitle": "You finished the deck!",
-      "choiceFinished": "Nice studying. Head home when you want another round.",
-      "typingFinished": "Amazing reading practice. Want another round? Head home and start again."
+  "appSettings": {
+    "language": "en-US",
+    "home": {
+      "tagline": "Practice that fits your grade",
+      "intro": "Short practice rounds for reading, math, science, and French - or even Computer Science stuff for dad. Pick a grade, choose a topic, and work through shuffled cards at your own pace."
     },
-    "sight-words": { "title": "Speech & Typing" },
-    "math": {
-      "title": "Math facts",
-      "promptName": "problem",
-      "choiceCue": "Solve this",
-      "typingCue": "Solve this",
-      "choiceFinished": "Great math practice. Head home when you want another round."
+    "multipleChoice": {
+      "secondsPerQuestion": 20,
+      "lowTimeSeconds": 5,
+      "roundSize": 10,
+      "wrongChoices": 3,
+      "scoring": { "firstTry": 10, "perWrongPick": 3, "hint": 1, "minimum": 1 },
+      "encouragement": ["Great job!", "Nice work!", "You're doing awesome!", "Way to go!", "Super!"],
+      "speech": { "rate": 0.85 }
     },
-    "decimal-operations": {
-      "title": "Decimal Operations",
-      "choiceFinished": "Solid decimal practice. Head home when you want another round."
+    "typingAndVoice": {
+      "cardsBeforeBreak": 5,
+      "breakSeconds": 2.8,
+      "encouragement": ["Great job!", "Nice work!", "You're doing awesome!", "Way to go!", "Super reading!"]
     },
-    "science": { "title": "Science" },
-    "french": { "title": "French" },
-    "geography": { "title": "Geography" },
-    "vocabulary": {
-      "title": "Vocabulary",
-      "listenCue": "Listen to the word",
-      "choiceFinished": "Great listening. Head home when you want another round."
-    }
-  },
-  "subjects": {
-    "math": { "label": "Math", "color": "red" },
-    "science": { "label": "Science", "color": "green" },
-    "french": { "label": "French", "color": "purple" },
-    "reading": { "label": "Reading", "color": "blue" },
-    "history": { "label": "History", "color": "yellow" },
-    "geography": { "label": "Geography", "color": "orange" }
-  },
-  "grades": [
-    {
-      "grade": 2,
-      "label": "2nd Grade",
-      "color": "sky",
-      "pickSubject": true,
-      "subjects": [
-        {
-          "subject": "math",
-          "summary": "Addition and subtraction with 1- and 2-digit numbers.",
-          "blurb": "Addition and subtraction up to 100.",
-          "decks": [
-            {
-              "unit": "addition",
-              "title": "Addition",
-              "description": "1- and 2-digit sums that never go over 100.",
-              "build": { "type": "wholeNumberOperations", "topic": "add" }
-            },
-            {
-              "unit": "subtraction",
-              "title": "Subtraction",
-              "description": "1- and 2-digit differences — never below zero.",
-              "build": { "type": "wholeNumberOperations", "topic": "sub" }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "grade": 3,
-      "label": "3rd Grade",
-      "color": "violet",
-      "pickSubject": true,
-      "subjects": [
-        {
-          "subject": "math",
-          "summary": "All four operations, including negative numbers.",
-          "blurb": "All four operations, with numbers from −1000 to 1000.",
-          "decks": [
-            {
-              "unit": "addition",
-              "title": "Addition",
-              "description": "Up to 3-digit numbers, including negatives.",
-              "build": { "type": "wholeNumberOperations", "topic": "add" }
-            },
-            {
-              "unit": "subtraction",
-              "title": "Subtraction",
-              "description": "Up to 3-digit numbers, including negatives.",
-              "build": { "type": "wholeNumberOperations", "topic": "sub" }
-            },
-            {
-              "unit": "multiplication",
-              "title": "Multiplication",
-              "description": "Times tables through 12, including negatives.",
-              "build": { "type": "wholeNumberOperations", "topic": "mul" }
-            },
-            {
-              "unit": "division",
-              "title": "Division",
-              "description": "Division facts through 12, including negatives.",
-              "build": { "type": "wholeNumberOperations", "topic": "div" }
-            },
-            {
-              "unit": "mixed",
-              "title": "All Four Operations",
-              "description": "A mix of +, −, ×, and ÷ problems.",
-              "build": { "type": "wholeNumberOperations", "topic": "mixed" }
-            }
-          ]
-        },
-        {
-          "subject": "reading",
-          "summary": "Words to spell by ear.",
-          "blurb": "Hear a word, then find it among look-alikes.",
-          "decks": [
-            {
-              "unit": "vocabulary",
-              "title": "Vocabulary",
-              "description": "Listen to a word read aloud, then tap that word among look-alikes. Tap Play again to hear it once more. {count} words.",
-              "build": { "type": "cards", "category": "vocabulary-grade3", "deckType": "vocabulary", "listen": true }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "grade": 4,
-      "label": "4th Grade",
-      "color": "teal",
-      "subjects": [
-        {
-          "subject": "reading",
-          "summary": "Sight words out loud or typed, and words to spell by ear.",
-          "decks": [
-            {
-              "unit": "sight-words",
-              "title": "Speech & Typing",
-              "description": "Practice high-frequency words aloud or by typing. Cards shuffle each round; with the mic, pause briefly after each word.",
-              "interaction": "voice-or-type",
-              "build": { "type": "cards", "category": "sight-words-grade4", "deckType": "sight-words" }
-            },
-            {
-              "unit": "vocabulary",
-              "title": "Vocabulary",
-              "description": "Listen to a word read aloud, then tap that word among look-alikes. Tap Play again to hear it once more. {count} words.",
-              "build": { "type": "cards", "category": "vocabulary-grade4", "deckType": "vocabulary", "listen": true }
-            }
-          ]
-        },
-        {
-          "subject": "math",
-          "summary": "Quick addition facts.",
-          "decks": [
-            {
-              "unit": "addition-facts",
-              "title": "Addition Facts",
-              "description": "Quick sums under ten. Say the answer or type it — digits like “7” or words like “seven” both work when using voice.",
-              "interaction": "voice-or-type",
-              "build": { "type": "cards", "category": "math-addition-grade4", "operation": "addition" }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "grade": 5,
-      "label": "5th Grade",
-      "color": "rose",
-      "pickSubject": true,
-      "subjects": [
-        {
-          "subject": "math",
-          "summary": "Multi-digit multiplication, long division, fractions, decimals, and order of operations.",
-          "blurb": "Multi-digit multiplication, long division, fractions, decimals, and order of operations.",
-          "decks": [
-            {
-              "unit": "multiplication",
-              "title": "Multi-Digit Multiplication",
-              "description": "2- and 3-digit numbers times 2-digit numbers, plus 4-digit times 1-digit.",
-              "build": { "type": "grade5", "topic": "multiplication" }
-            },
-            {
-              "unit": "division",
-              "title": "Long Division",
-              "description": "Up to 4-digit dividends and 2-digit divisors, some with remainders.",
-              "build": { "type": "grade5", "topic": "division" }
-            },
-            {
-              "unit": "fractions",
-              "title": "Fractions",
-              "description": "Add and subtract with unlike denominators, and multiply fractions.",
-              "build": { "type": "grade5", "topic": "fractions" }
-            },
-            {
-              "unit": "decimals",
-              "title": "Decimals",
-              "description": "Add and subtract to hundredths, multiply by whole numbers, and × or ÷ by 10, 100, and 1,000.",
-              "build": { "type": "grade5", "topic": "decimals" }
-            },
-            {
-              "unit": "order-of-operations",
-              "title": "Order of Operations",
-              "description": "Parentheses, then × and ÷, then + and −.",
-              "build": { "type": "grade5", "topic": "order-of-operations" }
-            },
-            {
-              "unit": "mixed",
-              "title": "Mixed Review",
-              "description": "A mix of every 5th grade topic.",
-              "build": { "type": "grade5", "topic": "mixed" }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "grade": 6,
-      "label": "6th Grade",
-      "color": "amber",
-      "pickSubject": true,
-      "subjects": [
-        {
-          "subject": "math",
-          "summary": "Decimal operations, with more units coming.",
-          "blurb": "Ten units for the year, starting with Decimal Operations.",
-          "units": [
-            {
-              "label": "Unit 1",
-              "title": "Decimal Operations",
-              "deck": {
-                "unit": "decimal-operations",
-                "description": "Add, subtract, multiply, and divide decimals — including money and measurement.",
-                "build": { "type": "decimalOperations" }
-              }
-            },
-            { "label": "Unit 2", "title": "Fraction Operations" },
-            { "label": "Unit 3", "title": "The Number System" },
-            { "label": "Unit 4", "title": "Ratios" },
-            { "label": "Unit 5", "title": "Rates and Percents" },
-            { "label": "Unit 6", "title": "Coordinate Plane" },
-            { "label": "Unit 7", "title": "Expressions" },
-            { "label": "Unit 8", "title": "Equations & Inequalities" },
-            { "label": "Unit 9", "title": "Geometry" },
-            { "label": "Unit 10", "title": "Data and Statistics" }
-          ]
-        },
-        {
-          "subject": "science",
-          "summary": "Cells, human body, genetics, evolution, and environment.",
-          "blurb": "Cells, the human body, genetics, evolution, and environmental science.",
-          "units": [
-            {
-              "label": "Unit 1",
-              "title": "Cells",
-              "deck": {
-                "unit": "cells",
-                "description": "The basic unit of life, cell parts, and what each part does.",
-                "build": { "type": "cards", "category": "science-cells-unit1" }
-              }
-            },
-            {
-              "label": "Unit 2",
-              "title": "Human Body",
-              "deck": {
-                "unit": "human-body",
-                "description": "Body systems and the organs that keep them running.",
-                "build": { "type": "cards", "category": "science-human-body-unit2" }
-              }
-            },
-            {
-              "label": "Unit 3",
-              "title": "Genetics",
-              "deck": {
-                "unit": "genetics",
-                "description": "DNA, dominant and recessive traits, genotype vs. phenotype, and Punnett squares.",
-                "build": { "type": "cards", "category": "science-genetics-unit3" }
-              }
-            },
-            {
-              "label": "Unit 4",
-              "title": "Evolution",
-              "deck": {
-                "unit": "evolution",
-                "description": "Natural selection, adaptations, fossils, and extinction.",
-                "build": { "type": "cards", "category": "science-evolution-unit4" }
-              }
-            },
-            {
-              "label": "Unit 5",
-              "title": "Environmental Science",
-              "deck": {
-                "unit": "environmental-science",
-                "description": "Ecosystems, producers, food chains, resources, and pollution.",
-                "build": { "type": "cards", "category": "science-environmental-unit5" }
-              }
-            }
-          ]
-        },
-        {
-          "subject": "french",
-          "summary": "The alphabet and color words, with more units coming.",
-          "blurb": "Alphabet, communication, colors, food, and school, starting with the Alphabet.",
-          "units": [
-            {
-              "label": "Unit 1",
-              "title": "Alphabet",
-              "deck": {
-                "unit": "alphabet",
-                "description": "Hear a letter said in French, then pick it, accents included. {count} letters.",
-                "build": { "type": "cards", "category": "french-alphabet-unit1", "listen": true }
-              }
-            },
-            { "label": "Unit 2", "title": "Communication" },
-            {
-              "label": "Unit 3",
-              "title": "Colors",
-              "deck": {
-                "unit": "colors",
-                "description": "Twelve color words — French to English, English to French, and short example phrases.",
-                "build": { "type": "cards", "category": "french-colors-unit3" }
-              }
-            },
-            { "label": "Unit 4", "title": "Food" },
-            { "label": "Unit 5", "title": "School" }
-          ]
-        },
-        {
-          "subject": "geography",
-          "summary": "Name countries on the map, region by region.",
-          "blurb": "Countries of the world on the map, one region per unit.",
-          "units": [
-            {
-              "label": "Unit 1",
-              "title": "North America: Continental North & Central",
-              "deck": {
-                "unit": "north-america-continental",
-                "description": "Name all {count} countries of continental North and Central America from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-north-america-continental"] }
-              }
-            },
-            {
-              "label": "Unit 2",
-              "title": "North America: Island Nations",
-              "deck": {
-                "unit": "north-america-islands",
-                "description": "Name all {count} countries of the Caribbean island nations from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-north-america-islands"] }
-              }
-            },
-            {
-              "label": "Unit 3",
-              "title": "South America",
-              "deck": {
-                "unit": "south-america",
-                "description": "Name all {count} countries of South America from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-south-america"] }
-              }
-            },
-            {
-              "label": "Unit 4",
-              "title": "Europe: West",
-              "deck": {
-                "unit": "europe-west",
-                "description": "Name all {count} countries of Western Europe from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-europe-west"] }
-              }
-            },
-            {
-              "label": "Unit 5",
-              "title": "Europe: East",
-              "deck": {
-                "unit": "europe-east",
-                "description": "Name all {count} countries of Eastern Europe from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-europe-east"] }
-              }
-            },
-            {
-              "label": "Unit 6",
-              "title": "Africa: North",
-              "deck": {
-                "unit": "africa-north",
-                "description": "Name all {count} countries of North Africa from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-africa-north"] }
-              }
-            },
-            {
-              "label": "Unit 7",
-              "title": "Africa: Central",
-              "deck": {
-                "unit": "africa-central",
-                "description": "Name all {count} countries of Central Africa from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-africa-central"] }
-              }
-            },
-            {
-              "label": "Unit 8",
-              "title": "Africa: South",
-              "deck": {
-                "unit": "africa-south",
-                "description": "Name all {count} countries of Southern Africa from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-africa-south"] }
-              }
-            },
-            {
-              "label": "Unit 9",
-              "title": "Asia: West",
-              "deck": {
-                "unit": "asia-west",
-                "description": "Name all {count} countries of West Asia from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-asia-west"] }
-              }
-            },
-            {
-              "label": "Unit 10",
-              "title": "Asia: East",
-              "deck": {
-                "unit": "asia-east",
-                "description": "Name all {count} countries of East Asia from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-asia-east"] }
-              }
-            },
-            {
-              "label": "Unit 11",
-              "title": "Oceania",
-              "deck": {
-                "unit": "oceania",
-                "description": "Name all {count} countries of Oceania from a blank map.",
-                "build": { "type": "countries", "categories": ["geography-oceania"] }
-              }
-            },
-            {
-              "label": "Final",
-              "title": "All Countries",
-              "deck": {
-                "unit": "final",
-                "description": "All {count} countries in random order, mixed across every continent.",
-                "build": {
-                  "type": "countries",
-                  "categories": [
-                    "geography-north-america-continental",
-                    "geography-north-america-islands",
-                    "geography-south-america",
-                    "geography-europe-west",
-                    "geography-europe-east",
-                    "geography-africa-north",
-                    "geography-africa-central",
-                    "geography-africa-south",
-                    "geography-asia-west",
-                    "geography-asia-east",
-                    "geography-oceania"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "mathRules": {
-    "wholeNumberOperations": {
-      "deckSize": 20,
-      "grades": {
-        "2": {
-          "range": { "min": 0, "max": 100 },
-          "negativeChance": 0,
-          "operations": {
-            "add": { "operand": [{ "min": 1, "max": 9, "weight": 0.3 }, { "min": 10, "max": 99, "weight": 0.7 }] },
-            "sub": {
-              "operand": [{ "min": 1, "max": 9, "weight": 0.3 }, { "min": 10, "max": 99, "weight": 0.7 }],
-              "largerFirst": true
-            }
-          }
-        },
-        "3": {
-          "range": { "min": -1000, "max": 1000 },
-          "negativeChance": 0.3,
-          "operations": {
-            "add": {
-              "operand": [
-                { "min": 1, "max": 9, "weight": 0.2 },
-                { "min": 10, "max": 99, "weight": 0.4 },
-                { "min": 100, "max": 999, "weight": 0.4 }
-              ]
-            },
-            "sub": {
-              "operand": [
-                { "min": 1, "max": 9, "weight": 0.2 },
-                { "min": 10, "max": 99, "weight": 0.4 },
-                { "min": 100, "max": 999, "weight": 0.4 }
-              ]
-            },
-            "mul": { "operand": { "min": 2, "max": 12 } },
-            "div": { "divisor": { "min": 2, "max": 12 }, "quotient": { "min": 1, "max": 12 } }
-          }
-        }
+    "playText": {
+      "default": {
+        "title": "Practice",
+        "promptName": "word",
+        "choiceCue": "Answer this",
+        "listenCue": "Listen, then pick what you hear",
+        "typingCue": "Say this word",
+        "finishedTitle": "You finished the deck!",
+        "choiceFinished": "Nice studying. Head home when you want another round.",
+        "typingFinished": "Amazing reading practice. Want another round? Head home and start again."
+      },
+      "sight-words": { "title": "Speech & Typing" },
+      "math": {
+        "title": "Math facts",
+        "promptName": "problem",
+        "choiceCue": "Solve this",
+        "typingCue": "Solve this",
+        "choiceFinished": "Great math practice. Head home when you want another round."
+      },
+      "decimal-operations": {
+        "title": "Decimal Operations",
+        "choiceFinished": "Solid decimal practice. Head home when you want another round."
+      },
+      "calculation-practice": {
+        "title": "Calculation Practice",
+        "choiceFinished": "Sharp factoring. Head home when you want another round."
+      },
+      "science": { "title": "Science" },
+      "french": { "title": "French" },
+      "geography": { "title": "Geography" },
+      "angular": { "title": "Angular", "promptName": "definition", "choiceCue": "Which term matches?" },
+      "azure-fundamentals": { "title": "Azure Fundamentals", "promptName": "definition", "choiceCue": "Which term matches?" },
+      "vocabulary": {
+        "title": "Vocabulary",
+        "listenCue": "Listen to the word",
+        "choiceFinished": "Great listening. Head home when you want another round."
       }
+    }
+  },
+  "catalog": {
+    "subjects": {
+      "math": { "label": "Math", "color": "red" },
+      "science": { "label": "Science", "color": "green" },
+      "french": { "label": "French", "color": "purple" },
+      "reading": { "label": "Reading", "color": "blue" },
+      "history": { "label": "History", "color": "yellow" },
+      "geography": { "label": "Geography", "color": "orange" },
+      "angular": { "label": "Angular", "color": "red" },
+      "azure-fundamentals": { "label": "Azure Fundamentals", "color": "blue" }
     },
-    "grade5": {
-      "deckSize": 20,
-      "mixed": { "multiplication": 1, "division": 1, "fractions": 1, "decimals": 1, "order-of-operations": 1 },
-      "multiplication": {
-        "shapes": [
-          { "weight": 0.3, "first": { "min": 12, "max": 99 }, "second": { "min": 12, "max": 99 } },
-          { "weight": 0.5, "first": { "min": 101, "max": 999 }, "second": { "min": 12, "max": 99 } },
-          { "weight": 0.2, "first": { "min": 1001, "max": 9999 }, "second": { "min": 3, "max": 9 } }
+    "grades": [
+      {
+        "grade": 2,
+        "label": "2nd Grade",
+        "color": "sky",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "math",
+            "summary": "Addition and subtraction with 1- and 2-digit numbers.",
+            "blurb": "Addition and subtraction up to 100.",
+            "decks": [
+              {
+                "unit": "addition",
+                "title": "Addition",
+                "description": "1- and 2-digit sums that never go over 100.",
+                "build": { "type": "wholeNumberOperations", "topic": "add" }
+              },
+              {
+                "unit": "subtraction",
+                "title": "Subtraction",
+                "description": "1- and 2-digit differences — never below zero.",
+                "build": { "type": "wholeNumberOperations", "topic": "sub" }
+              }
+            ]
+          },
+          {
+            "subject": "reading",
+            "summary": "Easy words to find by ear.",
+            "blurb": "Hear a common word, then find it among look-alikes.",
+            "decks": [
+              {
+                "unit": "vocabulary",
+                "title": "Vocabulary",
+                "description": "Listen to a word read aloud, then tap that word among look-alikes. Tap Play again to hear it once more. {count} words.",
+                "build": { "type": "cards", "sets": ["vocabulary-grade2"], "deckType": "vocabulary", "listen": true }
+              }
+            ]
+          }
         ]
       },
-      "division": {
-        "divisor": [{ "min": 11, "max": 99, "weight": 0.7 }, { "min": 3, "max": 9, "weight": 0.3 }],
-        "remainderChance": 0.3,
-        "quotientMin": 10,
-        "dividendMax": 9999
+      {
+        "grade": 3,
+        "label": "3rd Grade",
+        "color": "violet",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "math",
+            "summary": "Addition and subtraction within 100, plus times tables through 10.",
+            "blurb": "All four operations: sums within 100 and multiplication facts through 10.",
+            "decks": [
+              {
+                "unit": "addition",
+                "title": "Addition",
+                "description": "Mostly 2-digit numbers, with sums up to 100.",
+                "build": { "type": "wholeNumberOperations", "topic": "add" }
+              },
+              {
+                "unit": "subtraction",
+                "title": "Subtraction",
+                "description": "Mostly 2-digit numbers — never below zero.",
+                "build": { "type": "wholeNumberOperations", "topic": "sub" }
+              },
+              {
+                "unit": "multiplication",
+                "title": "Multiplication",
+                "description": "Times tables through 10.",
+                "build": { "type": "wholeNumberOperations", "topic": "mul" }
+              },
+              {
+                "unit": "division",
+                "title": "Division",
+                "description": "Division facts through 10.",
+                "build": { "type": "wholeNumberOperations", "topic": "div" }
+              },
+              {
+                "unit": "mixed",
+                "title": "All Four Operations",
+                "description": "A mix of +, −, ×, and ÷ problems.",
+                "build": { "type": "wholeNumberOperations", "topic": "mixed" }
+              }
+            ]
+          },
+          {
+            "subject": "reading",
+            "summary": "Common words to find by ear.",
+            "blurb": "Hear a word, then find it among look-alikes.",
+            "decks": [
+              {
+                "unit": "vocabulary",
+                "title": "Vocabulary",
+                "description": "Listen to a word read aloud, then tap that word among look-alikes. Tap Play again to hear it once more. {count} words.",
+                "build": { "type": "cards", "sets": ["vocabulary-grade3"], "deckType": "vocabulary", "listen": true }
+              }
+            ]
+          }
+        ]
       },
-      "fractions": {
-        "problems": { "add-subtract": 0.6, "multiply": 0.4 },
-        "denominators": [2, 3, 4, 5, 6, 8, 10, 12],
-        "addChance": 0.5,
-        "wholeTimesFractionChance": 0.5,
-        "wholeFactor": { "min": 2, "max": 9 }
+      {
+        "grade": 4,
+        "label": "4th Grade",
+        "color": "teal",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "math",
+            "summary": "All four operations with 1- and 2-digit numbers.",
+            "decks": [
+              {
+                "unit": "addition",
+                "title": "Addition",
+                "description": "Two 2-digit numbers, with sums up to 198.",
+                "build": { "type": "wholeNumberOperations", "topic": "add" }
+              },
+              {
+                "unit": "subtraction",
+                "title": "Subtraction",
+                "description": "Two 2-digit numbers — never below zero.",
+                "build": { "type": "wholeNumberOperations", "topic": "sub" }
+              },
+              {
+                "unit": "multiplication",
+                "title": "Multiplication",
+                "description": "A 1- or 2-digit number times a 1-digit number, like 47 × 6.",
+                "build": { "type": "wholeNumberOperations", "topic": "mul" }
+              },
+              {
+                "unit": "division",
+                "title": "Division",
+                "description": "A 2-digit number divided by a 1-digit number, like 84 ÷ 4. Always divides evenly.",
+                "build": { "type": "wholeNumberOperations", "topic": "div" }
+              },
+              {
+                "unit": "mixed",
+                "title": "All Four Operations",
+                "description": "A mix of +, −, ×, and ÷ problems.",
+                "build": { "type": "wholeNumberOperations", "topic": "mixed" }
+              }
+            ]
+          },
+          {
+            "subject": "geography",
+            "summary": "U.S. states and their capitals on the map.",
+            "decks": [
+              {
+                "unit": "states",
+                "title": "States",
+                "description": "Name all {count} states from a blank U.S. map.",
+                "build": { "type": "states" }
+              },
+              {
+                "unit": "state-capitals",
+                "title": "State Capitals",
+                "description": "Each state is highlighted with its capital marked. Name the capital city. {count} states.",
+                "build": { "type": "stateCapitals" }
+              }
+            ]
+          },
+          {
+            "subject": "reading",
+            "summary": "More words to find by ear, and words to spell or answer with a mic.",
+            "decks": [
+              {
+                "unit": "vocabulary",
+                "title": "Vocabulary",
+                "description": "Listen to a word read aloud, then tap that word among look-alikes. Tap Play again to hear it once more. {count} words.",
+                "build": { "type": "cards", "sets": ["vocabulary-grade4"], "deckType": "vocabulary", "listen": true }
+              },
+              {
+                "unit": "sight-words",
+                "title": "Speech & Typing",
+                "description": "Practice high-frequency words aloud or by typing. Cards shuffle each round; with the mic, pause briefly after each word.",
+                "interaction": "voice-or-type",
+                "build": { "type": "sightWords" }
+              }
+            ]
+          }
+        ]
       },
-      "decimals": {
-        "problems": { "add-subtract": 0.5, "power-of-ten": 0.25, "times-whole": 0.25 },
-        "addSubtract": {
-          "addChance": 0.5,
-          "places": [1, 2],
-          "first": { "min": 1, "max": 49 },
-          "second": { "min": 0, "max": 29 }
-        },
-        "powerOfTen": { "multiplyChance": 0.5, "powers": [10, 100, 1000], "places": [1, 2], "number": { "min": 0, "max": 99 } },
-        "timesWhole": { "places": [1, 2], "decimal": { "min": 0, "max": 9 }, "whole": { "min": 2, "max": 9 } }
+      {
+        "grade": 5,
+        "label": "5th Grade",
+        "color": "rose",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "math",
+            "summary": "Multi-digit multiplication, long division, fractions, decimals, and order of operations.",
+            "blurb": "Multi-digit multiplication, long division, fractions, decimals, and order of operations.",
+            "decks": [
+              {
+                "unit": "multiplication",
+                "title": "Multi-Digit Multiplication",
+                "description": "2- and 3-digit numbers times 2-digit numbers, plus 4-digit times 1-digit.",
+                "build": { "type": "grade5", "topic": "multiplication" }
+              },
+              {
+                "unit": "division",
+                "title": "Long Division",
+                "description": "Up to 4-digit dividends and 2-digit divisors, some with remainders.",
+                "build": { "type": "grade5", "topic": "division" }
+              },
+              {
+                "unit": "fractions",
+                "title": "Fractions",
+                "description": "Add and subtract with unlike denominators, and multiply fractions.",
+                "build": { "type": "grade5", "topic": "fractions" }
+              },
+              {
+                "unit": "decimals",
+                "title": "Decimals",
+                "description": "Add and subtract to hundredths, multiply by whole numbers, and × or ÷ by 10, 100, and 1,000.",
+                "build": { "type": "grade5", "topic": "decimals" }
+              },
+              {
+                "unit": "order-of-operations",
+                "title": "Order of Operations",
+                "description": "Parentheses, then × and ÷, then + and −.",
+                "build": { "type": "grade5", "topic": "order-of-operations" }
+              },
+              {
+                "unit": "mixed",
+                "title": "Mixed Review",
+                "description": "A mix of every 5th grade topic.",
+                "build": { "type": "grade5", "topic": "mixed" }
+              }
+            ]
+          }
+        ]
       },
-      "orderOfOperations": {
-        "templates": {
-          "a + b × c": {
-            "weight": 1,
-            "numbers": { "a": { "min": 2, "max": 20 }, "b": { "min": 2, "max": 9 }, "c": { "min": 2, "max": 9 } }
+      {
+        "grade": 6,
+        "label": "6th Grade",
+        "color": "amber",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "math",
+            "summary": "Fractions and factors warm-ups, and decimal operations, with more units coming.",
+            "blurb": "A warm-up unit, then ten units for the year, starting with Decimal Operations.",
+            "units": [
+              {
+                "label": "Unit 0",
+                "title": "Calculation Practice",
+                "deck": {
+                  "unit": "calculation-practice",
+                  "description": "Warm-ups: simplify fractions, and find greatest common factors and least common multiples.",
+                  "build": { "type": "calculationPractice" }
+                }
+              },
+              {
+                "title": "Decimal Operations",
+                "deck": {
+                  "unit": "decimal-operations",
+                  "description": "Add, subtract, multiply, and divide decimals — including money and measurement.",
+                  "build": { "type": "decimalOperations" }
+                }
+              },
+              "Fraction Operations",
+              "The Number System",
+              "Ratios",
+              "Rates and Percents",
+              "Coordinate Plane",
+              "Expressions",
+              "Equations & Inequalities",
+              "Geometry",
+              "Data and Statistics"
+            ]
           },
-          "(a + b) × c": {
-            "weight": 1,
-            "numbers": { "a": { "min": 2, "max": 15 }, "b": { "min": 2, "max": 15 }, "c": { "min": 2, "max": 9 } }
+          {
+            "subject": "science",
+            "summary": "Cells, human body, genetics, evolution, and environment.",
+            "blurb": "Cells, the human body, genetics, evolution, and environmental science.",
+            "units": [
+              {
+                "title": "Cells",
+                "deck": {
+                  "unit": "cells",
+                  "description": "The basic unit of life, cell parts, and what each part does.",
+                  "build": { "type": "cards", "sets": ["cells"] }
+                }
+              },
+              {
+                "title": "Human Body",
+                "deck": {
+                  "unit": "human-body",
+                  "description": "Body systems and the organs that keep them running.",
+                  "build": { "type": "cards", "sets": ["human-body"] }
+                }
+              },
+              {
+                "title": "Genetics",
+                "deck": {
+                  "unit": "genetics",
+                  "description": "DNA, dominant and recessive traits, genotype vs. phenotype, and Punnett squares.",
+                  "build": { "type": "cards", "sets": ["genetics"] }
+                }
+              },
+              {
+                "title": "Evolution",
+                "deck": {
+                  "unit": "evolution",
+                  "description": "Natural selection, adaptations, fossils, and extinction.",
+                  "build": { "type": "cards", "sets": ["evolution"] }
+                }
+              },
+              {
+                "title": "Environmental Science",
+                "deck": {
+                  "unit": "environmental-science",
+                  "description": "Ecosystems, producers, food chains, resources, and pollution.",
+                  "build": { "type": "cards", "sets": ["environmental"] }
+                }
+              }
+            ]
           },
-          "a − b × c": {
-            "weight": 1,
-            "numbers": { "b": { "min": 2, "max": 6 }, "c": { "min": 2, "max": 6 }, "leftover": { "min": 1, "max": 30 } }
+          {
+            "subject": "french",
+            "summary": "The alphabet and color words, with more units coming.",
+            "blurb": "Alphabet, communication, colors, food, and school, starting with the Alphabet.",
+            "units": [
+              {
+                "title": "Alphabet",
+                "deck": {
+                  "unit": "alphabet",
+                  "description": "Hear a letter said in French, then pick it, accents included. {count} letters.",
+                  "build": { "type": "cards", "sets": ["letters", "accented-letters"], "listen": true }
+                }
+              },
+              "Communication",
+              {
+                "title": "Colors",
+                "deck": {
+                  "unit": "colors",
+                  "description": "Twelve color words — French to English, English to French, and short example phrases.",
+                  "build": { "type": "frenchColors" }
+                }
+              },
+              "Food",
+              "School"
+            ]
           },
-          "a × (b − c)": {
-            "weight": 1,
-            "numbers": { "a": { "min": 2, "max": 9 }, "c": { "min": 1, "max": 10 }, "difference": { "min": 2, "max": 10 } }
+          {
+            "subject": "geography",
+            "summary": "Name countries on the map, region by region.",
+            "blurb": "Countries of the world on the map, one region per unit.",
+            "units": [
+              {
+                "title": "North America: Continental North & Central",
+                "deck": {
+                  "unit": "north-america-continental",
+                  "description": "Name all {count} countries of continental North and Central America from a blank map.",
+                  "build": { "type": "countries", "regions": ["north-america-continental"] }
+                }
+              },
+              {
+                "title": "North America: Island Nations",
+                "deck": {
+                  "unit": "north-america-islands",
+                  "description": "Name all {count} countries of the Caribbean island nations from a blank map.",
+                  "build": { "type": "countries", "regions": ["north-america-islands"] }
+                }
+              },
+              {
+                "title": "South America",
+                "deck": {
+                  "unit": "south-america",
+                  "description": "Name all {count} countries of South America from a blank map.",
+                  "build": { "type": "countries", "regions": ["south-america"] }
+                }
+              },
+              {
+                "title": "Europe: West",
+                "deck": {
+                  "unit": "europe-west",
+                  "description": "Name all {count} countries of Western Europe from a blank map.",
+                  "build": { "type": "countries", "regions": ["europe-west"] }
+                }
+              },
+              {
+                "title": "Europe: East",
+                "deck": {
+                  "unit": "europe-east",
+                  "description": "Name all {count} countries of Eastern Europe from a blank map.",
+                  "build": { "type": "countries", "regions": ["europe-east"] }
+                }
+              },
+              {
+                "title": "Africa: North",
+                "deck": {
+                  "unit": "africa-north",
+                  "description": "Name all {count} countries of North Africa from a blank map.",
+                  "build": { "type": "countries", "regions": ["africa-north"] }
+                }
+              },
+              {
+                "title": "Africa: Central",
+                "deck": {
+                  "unit": "africa-central",
+                  "description": "Name all {count} countries of Central Africa from a blank map.",
+                  "build": { "type": "countries", "regions": ["africa-central"] }
+                }
+              },
+              {
+                "title": "Africa: South",
+                "deck": {
+                  "unit": "africa-south",
+                  "description": "Name all {count} countries of Southern Africa from a blank map.",
+                  "build": { "type": "countries", "regions": ["africa-south"] }
+                }
+              },
+              {
+                "title": "Asia: West",
+                "deck": {
+                  "unit": "asia-west",
+                  "description": "Name all {count} countries of West Asia from a blank map.",
+                  "build": { "type": "countries", "regions": ["asia-west"] }
+                }
+              },
+              {
+                "title": "Asia: East",
+                "deck": {
+                  "unit": "asia-east",
+                  "description": "Name all {count} countries of East Asia from a blank map.",
+                  "build": { "type": "countries", "regions": ["asia-east"] }
+                }
+              },
+              {
+                "title": "Oceania",
+                "deck": {
+                  "unit": "oceania",
+                  "description": "Name all {count} countries of Oceania from a blank map.",
+                  "build": { "type": "countries", "regions": ["oceania"] }
+                }
+              },
+              {
+                "label": "Final",
+                "title": "All Countries",
+                "deck": {
+                  "unit": "final",
+                  "description": "All {count} countries in random order, mixed across every continent.",
+                  "build": {
+                    "type": "countries"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "grade": "computer-science",
+        "label": "Computer Science",
+        "color": "blue",
+        "pickSubject": true,
+        "subjects": [
+          {
+            "subject": "angular",
+            "summary": "Angular terms, from first components to server-side rendering.",
+            "blurb": "Read a definition, then pick the matching term. Four levels, from Beginner to Mastery.",
+            "decks": [
+              {
+                "unit": "beginner",
+                "title": "Beginner",
+                "description": "Components, templates, binding, directives, services, and routing. {count} terms.",
+                "build": { "type": "cards", "sets": ["beginner"] }
+              },
+              {
+                "unit": "intermediate",
+                "title": "Intermediate",
+                "description": "Change detection, lifecycle hooks, forms, HTTP, and component communication. {count} terms.",
+                "build": { "type": "cards", "sets": ["intermediate"] }
+              },
+              {
+                "unit": "expert",
+                "title": "Expert",
+                "description": "Signals, standalone components, dependency injection, guards, and lazy loading. {count} terms.",
+                "build": { "type": "cards", "sets": ["expert"] }
+              },
+              {
+                "unit": "mastery",
+                "title": "Mastery",
+                "description": "Server-side rendering, hydration, performance, and app architecture. {count} terms.",
+                "build": { "type": "cards", "sets": ["mastery"] }
+              }
+            ]
           },
-          "a + b ÷ c": {
-            "weight": 1,
-            "numbers": { "a": { "min": 2, "max": 30 }, "c": { "min": 2, "max": 9 }, "quotient": { "min": 2, "max": 9 } }
-          },
-          "(a − b) ÷ c": {
-            "weight": 1,
-            "numbers": { "b": { "min": 2, "max": 20 }, "c": { "min": 2, "max": 9 }, "quotient": { "min": 2, "max": 9 } }
-          },
-          "a × b + c × d": {
-            "weight": 1,
-            "numbers": {
-              "a": { "min": 2, "max": 9 },
-              "b": { "min": 2, "max": 9 },
-              "c": { "min": 2, "max": 9 },
-              "d": { "min": 2, "max": 9 }
+          {
+            "subject": "azure-fundamentals",
+            "summary": "Cloud concepts, core Azure services, and governance.",
+            "blurb": "Read a definition, then pick the matching term. Cloud concepts, core services, security, and cost.",
+            "decks": [
+              {
+                "unit": "all-terms",
+                "title": "All Terms",
+                "description": "Cloud models, regions and resource groups, storage and compute, identity, and governance. {count} terms.",
+                "build": { "type": "cards", "sets": ["terms"] }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "subjectData": {
+    "math": {
+      "wholeNumberOperations": {
+        "deckSize": 20,
+        "grades": {
+          "2": {
+            "range": { "min": 0, "max": 100 },
+            "negativeChance": 0,
+            "operations": {
+              "add": { "operand": [{ "min": 1, "max": 9, "weight": 0.3 }, { "min": 10, "max": 99, "weight": 0.7 }] },
+              "sub": {
+                "operand": [{ "min": 1, "max": 9, "weight": 0.3 }, { "min": 10, "max": 99, "weight": 0.7 }],
+                "largerFirst": true
+              }
             }
+          },
+          "3": {
+            "range": { "min": 0, "max": 100 },
+            "negativeChance": 0,
+            "operations": {
+              "add": { "operand": [{ "min": 1, "max": 9, "weight": 0.15 }, { "min": 10, "max": 99, "weight": 0.85 }] },
+              "sub": {
+                "operand": [{ "min": 1, "max": 9, "weight": 0.15 }, { "min": 10, "max": 99, "weight": 0.85 }],
+                "largerFirst": true
+              },
+              "mul": { "operand": { "min": 2, "max": 10 } },
+              "div": { "divisor": { "min": 2, "max": 10 }, "quotient": { "min": 1, "max": 10 } }
+            }
+          },
+          "4": {
+            "range": { "min": 0, "max": 1000 },
+            "negativeChance": 0,
+            "operations": {
+              "add": { "operand": { "min": 10, "max": 99 } },
+              "sub": { "operand": { "min": 10, "max": 99 }, "largerFirst": true },
+              "mul": {
+                "operand": [{ "min": 2, "max": 9, "weight": 0.25 }, { "min": 10, "max": 99, "weight": 0.75 }],
+                "second": { "min": 2, "max": 9 }
+              },
+              "div": {
+                "divisor": { "min": 2, "max": 9 },
+                "quotient": [{ "min": 2, "max": 9, "weight": 0.15 }, { "min": 10, "max": 49, "weight": 0.85 }],
+                "dividendMax": 99
+              }
+            }
+          }
+        }
+      },
+      "grade5": {
+        "deckSize": 20,
+        "mixed": { "multiplication": 1, "division": 1, "fractions": 1, "decimals": 1, "order-of-operations": 1 },
+        "multiplication": {
+          "shapes": [
+            { "weight": 0.3, "first": { "min": 12, "max": 99 }, "second": { "min": 12, "max": 99 } },
+            { "weight": 0.5, "first": { "min": 101, "max": 999 }, "second": { "min": 12, "max": 99 } },
+            { "weight": 0.2, "first": { "min": 1001, "max": 9999 }, "second": { "min": 3, "max": 9 } }
+          ]
+        },
+        "division": {
+          "divisor": [{ "min": 11, "max": 99, "weight": 0.7 }, { "min": 3, "max": 9, "weight": 0.3 }],
+          "remainderChance": 0.3,
+          "quotientMin": 10,
+          "dividendMax": 9999
+        },
+        "fractions": {
+          "problems": { "add-subtract": 0.6, "multiply": 0.4 },
+          "denominators": [2, 3, 4, 5, 6, 8, 10, 12],
+          "addChance": 0.5,
+          "wholeTimesFractionChance": 0.5,
+          "wholeFactor": { "min": 2, "max": 9 }
+        },
+        "decimals": {
+          "problems": { "add-subtract": 0.5, "power-of-ten": 0.25, "times-whole": 0.25 },
+          "addSubtract": {
+            "addChance": 0.5,
+            "places": [1, 2],
+            "first": { "min": 1, "max": 49 },
+            "second": { "min": 0, "max": 29 }
+          },
+          "powerOfTen": { "multiplyChance": 0.5, "powers": [10, 100, 1000], "places": [1, 2], "number": { "min": 0, "max": 99 } },
+          "timesWhole": { "places": [1, 2], "decimal": { "min": 0, "max": 9 }, "whole": { "min": 2, "max": 9 } }
+        },
+        "orderOfOperations": {
+          "templates": {
+            "a + b × c": {
+              "weight": 1,
+              "numbers": { "a": { "min": 2, "max": 20 }, "b": { "min": 2, "max": 9 }, "c": { "min": 2, "max": 9 } }
+            },
+            "(a + b) × c": {
+              "weight": 1,
+              "numbers": { "a": { "min": 2, "max": 15 }, "b": { "min": 2, "max": 15 }, "c": { "min": 2, "max": 9 } }
+            },
+            "a − b × c": {
+              "weight": 1,
+              "numbers": { "b": { "min": 2, "max": 6 }, "c": { "min": 2, "max": 6 }, "leftover": { "min": 1, "max": 30 } }
+            },
+            "a × (b − c)": {
+              "weight": 1,
+              "numbers": { "a": { "min": 2, "max": 9 }, "c": { "min": 1, "max": 10 }, "difference": { "min": 2, "max": 10 } }
+            },
+            "a + b ÷ c": {
+              "weight": 1,
+              "numbers": { "a": { "min": 2, "max": 30 }, "c": { "min": 2, "max": 9 }, "quotient": { "min": 2, "max": 9 } }
+            },
+            "(a − b) ÷ c": {
+              "weight": 1,
+              "numbers": { "b": { "min": 2, "max": 20 }, "c": { "min": 2, "max": 9 }, "quotient": { "min": 2, "max": 9 } }
+            },
+            "a × b + c × d": {
+              "weight": 1,
+              "numbers": {
+                "a": { "min": 2, "max": 9 },
+                "b": { "min": 2, "max": 9 },
+                "c": { "min": 2, "max": 9 },
+                "d": { "min": 2, "max": 9 }
+              }
+            }
+          }
+        }
+      },
+      "decimalOperations": {
+        "deckSize": 50,
+        "operations": ["add", "sub", "mul", "div"],
+        "answer": { "min": 0.01, "max": 100 },
+        "wrongAnswerMax": 1000,
+        "unitChance": 0.5,
+        "units": ["money", "inches", "miles", "pounds", "liters"],
+        "decimalOperands": "one",
+        "decimalFirstChance": 0.5,
+        "twoPlacesChance": 0.35,
+        "maxWhole": { "add": 9, "sub": 9, "mul": 6, "div": 9, "divisor": 8, "money": 12, "quotient": 8 },
+        "cleanQuotientChance": 0.65
+      },
+      "calculationPractice": {
+        "deckSize": 30,
+        "topics": { "simplify": 1, "gcf": 1, "lcm": 1 },
+        "simplify": { "denominator": { "min": 2, "max": 12 }, "commonFactor": { "min": 2, "max": 9 } },
+        "gcf": { "factor": { "min": 2, "max": 12 }, "multiplier": { "min": 1, "max": 9 } },
+        "lcm": { "number": { "min": 2, "max": 12 } }
+      }
+    },
+    "science": {
+      "cardSets": {
+        "cells": {
+          "additionalIncorrectAnswers": ["Atom", "Tissue", "Organ", "Cell wall", "Cytoplasm", "Mitochondria", "Ribosome", "Vacuole", "Store water", "Make proteins", "Control the cell"],
+          "cards": {
+            "What is the basic unit of life?": "Cell",
+            "Which structure controls what enters and leaves the cell?": "Cell membrane",
+            "What part of the cell contains DNA?": "Nucleus",
+            "Which structure is found only in plant cells?": "Chloroplast",
+            "What is the job of mitochondria?": "Produce energy"
+          }
+        },
+        "human-body": {
+          "additionalIncorrectAnswers": ["Digestive system", "Nervous system", "Muscular system", "Stomach", "Lungs", "Skeletal system", "Immune system", "Pump blood", "Break down food", "Send signals", "Liver"],
+          "cards": {
+            "Which system carries oxygen and nutrients through the body?": "Circulatory system",
+            "What organ is the main control center of the body?": "Brain",
+            "Which system helps you breathe?": "Respiratory system",
+            "What is the main function of the skeletal system?": "Provide structure and support",
+            "Which organ pumps blood throughout the body?": "Heart"
+          }
+        },
+        "genetics": {
+          "additionalIncorrectAnswers": ["Water", "Protein", "Sugar", "Recessive", "Neutral", "Hidden", "Physical appearance", "A learned behavior", "A mutation", "The genetic code", "A chromosome", "A recessive gene", "Microscope", "Thermometer", "Graph"],
+          "cards": {
+            "What carries genetic information?": "DNA",
+            "A trait that shows up even if only one copy is present is called…": "Dominant",
+            "What is a genotype?": "The genetic makeup",
+            "What is a phenotype?": "The visible trait",
+            "What tool shows possible genetic outcomes?": "Punnett square"
+          }
+        },
+        "evolution": {
+          "additionalIncorrectAnswers": ["Sudden change in one organism", "A natural disaster", "A type of mutation", "Random mating", "Choosing pets", "A type of fossil", "Traits that harm organisms", "Traits learned in school", "Traits caused by weather", "Weather patterns", "Modern technology", "Plant growth", "Too much food", "Perfect adaptation", "Extra DNA"],
+          "cards": {
+            "What is evolution?": "Change in species over time",
+            "What is natural selection?": "Survival of organisms best suited to the environment",
+            "What are adaptations?": "Traits that help organisms survive",
+            "Fossils provide evidence of…": "Ancient life",
+            "What can cause a species to go extinct?": "Failure to survive environmental changes"
+          }
+        },
+        "environmental": {
+          "additionalIncorrectAnswers": ["A single organism", "A group of rocks", "A weather pattern", "Eat other animals", "Break down dead matter", "Hunt prey", "A list of animals", "A map of the Earth", "A type of ecosystem", "Coal", "Oil", "Natural gas", "Clean air", "Recycled materials", "Natural resources"],
+          "cards": {
+            "What is an ecosystem?": "A community of living and nonliving things",
+            "What do producers do?": "Make their own food",
+            "What is a food chain?": "A path showing how energy moves",
+            "Which resource can be replaced naturally?": "Solar energy",
+            "What is pollution?": "Harmful substances in the environment"
           }
         }
       }
     },
-    "decimalOperations": {
-      "deckSize": 50,
-      "operations": ["add", "sub", "mul", "div"],
-      "answer": { "min": 0.01, "max": 100 },
-      "wrongAnswerMax": 1000,
-      "unitChance": 0.5,
-      "units": ["money", "inches", "miles", "pounds", "liters"],
-      "bothDecimalChance": 0.4,
-      "decimalFirstChance": 0.5,
-      "decimalChance": 0.55,
-      "twoPlacesChance": 0.35,
-      "maxWhole": { "add": 9, "sub": 9, "mul": 6, "div": 9, "divisor": 8, "money": 12, "quotient": 8 },
-      "cleanQuotientChance": 0.65
+    "french": {
+      "cardSets": {
+        "letters": {
+          "lang": "fr-FR",
+          "cards": {
+            "a": "a",
+            "bé": "b",
+            "cé": "c",
+            "dé": "d",
+            "e": { "answer": "e", "hint": "Its name sounds like the \"u\" in \"fun\"." },
+            "effe": "f",
+            "gé": { "answer": "g", "hint": "Its name sounds like \"zhay\", close to the English letter J." },
+            "ache": { "answer": "h", "hint": "Its name sounds like \"ash\"." },
+            "i": { "answer": "i", "hint": "Its name sounds like the English letter E." },
+            "ji": { "answer": "j", "hint": "Its name sounds like \"zhee\"." },
+            "ka": "k",
+            "elle": "l",
+            "emme": "m",
+            "enne": "n",
+            "o": "o",
+            "pé": "p",
+            "qu": { "answer": "q", "hint": "Its name rhymes with the French letter U." },
+            "erre": { "answer": "r", "hint": "Its name sounds like \"air\"." },
+            "esse": "s",
+            "té": "t",
+            "u": { "answer": "u", "hint": "Round your lips to say \"oo\", then say \"ee\" without moving them." },
+            "vé": "v",
+            "double vé": { "answer": "w", "hint": "Its name means \"double V\"." },
+            "ixe": { "answer": "x", "hint": "Its name sounds like \"eeks\"." },
+            "i grec": { "answer": "y", "hint": "Its name means \"Greek I\"." },
+            "zède": { "answer": "z", "hint": "Its name sounds like \"zed\"." }
+          }
+        },
+        "accented-letters": {
+          "lang": "fr-FR",
+          "cards": {
+            "e accent aigu": { "answer": "é", "hint": "An accent aigu slants up to the right: ´" },
+            "e accent grave": { "answer": "è", "hint": "An accent grave slants down to the right: `" },
+            "e accent circonflexe": { "answer": "ê", "hint": "An accent circonflexe looks like a little hat: ^" },
+            "e tréma": { "answer": "ë", "hint": "A tréma is two dots above the letter: ¨" },
+            "a accent grave": { "answer": "à", "hint": "An accent grave slants down to the right: `" },
+            "a accent circonflexe": { "answer": "â", "hint": "An accent circonflexe looks like a little hat: ^" },
+            "i accent circonflexe": { "answer": "î", "hint": "An accent circonflexe looks like a little hat: ^" },
+            "i tréma": { "answer": "ï", "hint": "A tréma is two dots above the letter: ¨" },
+            "o accent circonflexe": { "answer": "ô", "hint": "An accent circonflexe looks like a little hat: ^" },
+            "u accent grave": { "answer": "ù", "hint": "An accent grave slants down to the right: `" },
+            "u accent circonflexe": { "answer": "û", "hint": "An accent circonflexe looks like a little hat: ^" },
+            "c cédille": { "answer": "ç", "hint": "A cédille is a little tail under the letter: ¸" }
+          }
+        }
+      },
+      "colors": {
+        "templates": {
+          "toFrench": {
+            "question": "How do you say \"{en}\" in French?",
+            "hint": "It starts with \"{initial}\": {blank} ({example})."
+          },
+          "toEnglish": { "question": "What does \"{fr}\" mean?", "hint": "You'd see it in \"{phrase}\"." },
+          "phrase": { "question": "What does \"{phrase}\" mean?", "hint": "The color word is \"{fr}\"." }
+        },
+        "additionalIncorrectAnswers": {
+          "crayon": "pencil",
+          "bibliothèque": "library",
+          "ville": "town",
+          "école": "school",
+          "livre": "book",
+          "chaise": "chair",
+          "maison": "house",
+          "chien": "dog",
+          "pomme": "apple",
+          "fenêtre": "window"
+        },
+        "colors": [
+          { "fr": "rouge", "en": "red", "phrase": "un ballon rouge", "phraseEn": "a {color} ball" },
+          { "fr": "bleu", "en": "blue", "phrase": "le ciel est bleu", "phraseEn": "the sky is {color}" },
+          {
+            "fr": "vert",
+            "en": "green",
+            "phrase": "une feuille verte",
+            "phraseEn": "a {color} leaf",
+            "phraseHint": "\"verte\" is \"vert\" + e because \"feuille\" is feminine."
+          },
+          { "fr": "jaune", "en": "yellow", "phrase": "un soleil jaune", "phraseEn": "a {color} sun" },
+          { "fr": "noir", "en": "black", "phrase": "un chat noir", "phraseEn": "a {color} cat" },
+          {
+            "fr": "blanc",
+            "en": "white",
+            "phrase": "une chemise blanche",
+            "phraseEn": "a {color} shirt",
+            "phraseHint": "\"blanche\" is the feminine form of \"blanc\" because \"chemise\" is feminine."
+          },
+          { "fr": "marron", "en": "brown", "phrase": "un café marron", "phraseEn": "a {color} coffee" },
+          { "fr": "gris", "en": "gray", "phrase": "un ciel gris", "phraseEn": "a {color} sky" },
+          {
+            "fr": "orange",
+            "en": "orange",
+            "phrase": "une orange",
+            "phraseEn": "a {color} fruit",
+            "phraseHint": "Here \"orange\" is the fruit itself — same word as the color."
+          },
+          { "fr": "rose", "en": "pink", "phrase": "une fleur rose", "phraseEn": "a {color} flower" },
+          {
+            "fr": "violet",
+            "en": "purple",
+            "phrase": "des fleurs violettes",
+            "phraseEn": "{color} flowers",
+            "phraseHint": "\"violettes\" is \"violet\" made feminine and plural to match \"fleurs\"."
+          },
+          { "fr": "beige", "en": "beige", "phrase": "un canapé beige", "phraseEn": "a {color} sofa" }
+        ]
+      }
+    },
+    "reading": {
+      "cardSets": {
+        "vocabulary-grade2": {
+          "cards": {
+            "the": { "incorrectAnswers": ["then", "they", "them"], "hint": "Look at ___ big red ball." },
+            "of": { "incorrectAnswers": ["off", "if", "or"], "hint": "I want a cup ___ milk." },
+            "and": { "incorrectAnswers": ["an", "end", "add"], "hint": "Mom ___ Dad went to the store." },
+            "a": { "incorrectAnswers": ["an", "at", "as"], "hint": "I have ___ pet cat." },
+            "to": { "incorrectAnswers": ["do", "go", "so"], "hint": "We walk ___ school." },
+            "in": { "incorrectAnswers": ["on", "is", "it"], "hint": "The fish swims ___ the pond." },
+            "is": { "incorrectAnswers": ["his", "it", "as"], "hint": "My dog ___ very big." },
+            "you": { "incorrectAnswers": ["your", "yes", "yet"], "hint": "Thank ___ for the gift." },
+            "that": { "incorrectAnswers": ["what", "than", "hat"], "hint": "Can I have ___ red one?" },
+            "it": { "incorrectAnswers": ["at", "is", "its"], "hint": "Pick ___ up off the floor." },
+            "he": { "incorrectAnswers": ["her", "she", "hen"], "hint": "Sam said ___ is six years old." },
+            "was": { "incorrectAnswers": ["saw", "wax", "has"], "hint": "Yesterday ___ my birthday." },
+            "for": { "incorrectAnswers": ["from", "far", "fort"], "hint": "This gift is ___ you." },
+            "on": { "incorrectAnswers": ["no", "one", "in"], "hint": "The cat sat ___ the mat." },
+            "are": { "incorrectAnswers": ["ear", "art", "arm"], "hint": "We ___ going to the park." },
+            "as": { "incorrectAnswers": ["is", "has", "ask"], "hint": "I am ___ tall ___ my brother." },
+            "with": { "incorrectAnswers": ["wish", "width", "which"], "hint": "Come play ___ me." },
+            "his": { "incorrectAnswers": ["is", "has", "hit"], "hint": "Ben lost ___ hat." },
+            "they": { "incorrectAnswers": ["then", "them", "the"], "hint": "My friends said ___ will come." },
+            "I": { "incorrectAnswers": ["a", "in", "it"], "hint": "___ like to read books." },
+            "at": { "incorrectAnswers": ["it", "an", "eat"], "hint": "Meet me ___ the park." },
+            "be": { "incorrectAnswers": ["by", "bed", "beg"], "hint": "I want to ___ a doctor." },
+            "this": { "incorrectAnswers": ["these", "thin", "his"], "hint": "Is ___ your coat?" },
+            "have": { "incorrectAnswers": ["hive", "hate", "has"], "hint": "I ___ two cats." },
+            "from": { "incorrectAnswers": ["form", "for", "frog"], "hint": "I got a letter ___ Grandma." },
+            "or": { "incorrectAnswers": ["our", "for", "on"], "hint": "Do you want milk ___ juice?" },
+            "one": { "incorrectAnswers": ["on", "once", "none"], "hint": "I have ___ nose." },
+            "had": { "incorrectAnswers": ["hat", "has", "hid"], "hint": "We ___ fun at the beach." },
+            "by": { "incorrectAnswers": ["be", "boy", "my"], "hint": "Sit ___ me on the bus." },
+            "word": { "incorrectAnswers": ["world", "work", "wood"], "hint": "Can you spell this ___?" },
+            "but": { "incorrectAnswers": ["bat", "bus", "bud"], "hint": "I like apples, ___ not pears." },
+            "not": { "incorrectAnswers": ["nut", "note", "net"], "hint": "I am ___ sleepy yet." },
+            "what": { "incorrectAnswers": ["want", "that", "wait"], "hint": "___ is your name?" },
+            "all": { "incorrectAnswers": ["ball", "ill", "tall"], "hint": "We ate ___ of the cake." },
+            "were": { "incorrectAnswers": ["where", "wore", "here"], "hint": "We ___ at the zoo all day." },
+            "we": { "incorrectAnswers": ["me", "wet", "web"], "hint": "Can ___ go outside now?" },
+            "when": { "incorrectAnswers": ["then", "win", "went"], "hint": "___ is lunch time?" },
+            "your": { "incorrectAnswers": ["you", "year", "our"], "hint": "Is this ___ backpack?" },
+            "can": { "incorrectAnswers": ["cane", "cat", "car"], "hint": "I ___ ride a bike." },
+            "said": { "incorrectAnswers": ["sad", "sand", "sail"], "hint": "Mom ___ it is time for bed." },
+            "there": { "incorrectAnswers": ["three", "these", "here"], "hint": "Put the box over ___." },
+            "use": { "incorrectAnswers": ["us", "fuse", "used"], "hint": "Can I ___ your pencil?" },
+            "an": { "incorrectAnswers": ["and", "in", "on"], "hint": "I ate ___ apple." },
+            "each": { "incorrectAnswers": ["eat", "reach", "beach"], "hint": "Give ___ child one cookie." },
+            "which": { "incorrectAnswers": ["with", "wish", "rich"], "hint": "___ hat is yours?" },
+            "she": { "incorrectAnswers": ["he", "shoe", "see"], "hint": "My sister said ___ is hungry." },
+            "do": { "incorrectAnswers": ["go", "so", "dot"], "hint": "What did you ___ today?" },
+            "how": { "incorrectAnswers": ["who", "now", "cow"], "hint": "___ old are you?" },
+            "their": { "incorrectAnswers": ["them", "then", "the"], "hint": "The kids put on ___ coats." },
+            "if": { "incorrectAnswers": ["of", "it", "is"], "hint": "Tell me ___ you need help." },
+            "will": { "incorrectAnswers": ["well", "wall", "wild"], "hint": "I ___ call you later." },
+            "up": { "incorrectAnswers": ["us", "pup", "cup"], "hint": "The bird flew ___ into the sky." },
+            "other": { "incorrectAnswers": ["mother", "otter", "order"], "hint": "Put on your ___ shoe." },
+            "about": { "incorrectAnswers": ["above", "around", "shout"], "hint": "This book is ___ dogs." },
+            "out": { "incorrectAnswers": ["our", "but", "owl"], "hint": "Let's go ___ to play." },
+            "many": { "incorrectAnswers": ["money", "may", "man"], "hint": "How ___ apples do you have?" },
+            "then": { "incorrectAnswers": ["than", "them", "ten"], "hint": "First we eat, ___ we play." },
+            "them": { "incorrectAnswers": ["then", "the", "hem"], "hint": "I gave ___ some snacks." },
+            "these": { "incorrectAnswers": ["those", "this", "cheese"], "hint": "Are ___ your socks?" },
+            "so": { "incorrectAnswers": ["to", "no", "sun"], "hint": "I am ___ happy today!" },
+            "some": { "incorrectAnswers": ["same", "come", "home"], "hint": "Can I have ___ juice?" },
+            "her": { "incorrectAnswers": ["he", "hen", "hair"], "hint": "Ask Mia if this is ___ cup." },
+            "would": { "incorrectAnswers": ["could", "world", "word"], "hint": "___ you like to play?" },
+            "make": { "incorrectAnswers": ["made", "mask", "lake"], "hint": "Let's ___ a cake." },
+            "like": { "incorrectAnswers": ["lick", "bike", "line"], "hint": "I ___ to swim." },
+            "him": { "incorrectAnswers": ["his", "hem", "hit"], "hint": "Give ___ the ball." },
+            "into": { "incorrectAnswers": ["onto", "inch", "intro"], "hint": "The frog jumped ___ the pond." },
+            "time": { "incorrectAnswers": ["tame", "tide", "dime"], "hint": "What ___ is it?" },
+            "has": { "incorrectAnswers": ["his", "had", "hat"], "hint": "She ___ a red bike." },
+            "look": { "incorrectAnswers": ["lock", "book", "took"], "hint": "___ at that rainbow!" },
+            "two": { "incorrectAnswers": ["twin", "tow", "tool"], "hint": "A bike has ___ wheels." },
+            "more": { "incorrectAnswers": ["move", "mare", "mole"], "hint": "Can I have ___ milk, please?" },
+            "write": { "incorrectAnswers": ["white", "wrist", "wire"], "hint": "I can ___ my name." },
+            "go": { "incorrectAnswers": ["got", "do", "goat"], "hint": "Let's ___ to the park." },
+            "see": { "incorrectAnswers": ["she", "seed", "bee"], "hint": "I can ___ the moon." },
+            "number": { "incorrectAnswers": ["member", "lumber", "numb"], "hint": "Seven is my favorite ___." },
+            "no": { "incorrectAnswers": ["on", "not", "now"], "hint": "There is ___ more cake." },
+            "way": { "incorrectAnswers": ["why", "wax", "day"], "hint": "Which ___ is the park?" },
+            "could": { "incorrectAnswers": ["cold", "would", "cloud"], "hint": "___ you help me, please?" },
+            "people": { "incorrectAnswers": ["purple", "pebble", "puddle"], "hint": "Lots of ___ came to the fair." },
+            "my": { "incorrectAnswers": ["me", "may", "by"], "hint": "This is ___ dog, Max." },
+            "than": { "incorrectAnswers": ["then", "that", "thin"], "hint": "A bus is bigger ___ a car." },
+            "first": { "incorrectAnswers": ["fist", "fast", "frost"], "hint": "I was ___ in line." },
+            "water": { "incorrectAnswers": ["waiter", "winter", "later"], "hint": "Fish live in the ___." },
+            "been": { "incorrectAnswers": ["bent", "begin", "seen"], "hint": "I have ___ to the zoo." },
+            "call": { "incorrectAnswers": ["cell", "ball", "calm"], "hint": "I will ___ you on the phone." },
+            "who": { "incorrectAnswers": ["how", "why", "hoot"], "hint": "___ is at the door?" },
+            "oil": { "incorrectAnswers": ["owl", "boil", "foil"], "hint": "Dad put ___ in the car." },
+            "its": { "incorrectAnswers": ["it", "is", "sits"], "hint": "The dog wagged ___ tail." },
+            "now": { "incorrectAnswers": ["no", "new", "cow"], "hint": "Come here right ___!" },
+            "find": { "incorrectAnswers": ["fine", "kind", "fond"], "hint": "Help me ___ my shoe." },
+            "long": { "incorrectAnswers": ["log", "lung", "song"], "hint": "A snake has a ___ body." },
+            "down": { "incorrectAnswers": ["dawn", "town", "gown"], "hint": "Sit ___ on the rug." },
+            "day": { "incorrectAnswers": ["dad", "say", "dry"], "hint": "Have a nice ___!" },
+            "did": { "incorrectAnswers": ["dad", "dig", "kid"], "hint": "I ___ my homework." },
+            "get": { "incorrectAnswers": ["got", "gate", "jet"], "hint": "Can you ___ me a cup?" },
+            "come": { "incorrectAnswers": ["came", "cone", "comb"], "hint": "Please ___ to my party." },
+            "made": { "incorrectAnswers": ["mad", "make", "mud"], "hint": "We ___ a sand castle." },
+            "may": { "incorrectAnswers": ["my", "map", "man"], "hint": "___ I go outside?" },
+            "part": { "incorrectAnswers": ["park", "port", "pat"], "hint": "This is my favorite ___ of the song." }
+          }
+        },
+        "vocabulary-grade3": {
+          "cards": {
+            "over": { "incorrectAnswers": ["oven", "ever", "cover"], "hint": "The cow jumped ___ the moon." },
+            "new": { "incorrectAnswers": ["now", "few", "news"], "hint": "I got a ___ toy for my birthday." },
+            "sound": { "incorrectAnswers": ["round", "sand", "found"], "hint": "What ___ does a cat make?" },
+            "take": { "incorrectAnswers": ["tale", "make", "lake"], "hint": "Please ___ your shoes off at the door." },
+            "only": { "incorrectAnswers": ["lonely", "oily", "onto"], "hint": "There is ___ one cookie left." },
+            "little": { "incorrectAnswers": ["litter", "title", "middle"], "hint": "A mouse is a ___ animal." },
+            "work": { "incorrectAnswers": ["word", "worm", "fork"], "hint": "Dad goes to ___ every morning." },
+            "know": { "incorrectAnswers": ["now", "known", "snow"], "hint": "Do you ___ the answer?" },
+            "place": { "incorrectAnswers": ["plate", "plane", "palace"], "hint": "This park is my favorite ___ to play." },
+            "year": { "incorrectAnswers": ["yarn", "near", "yell"], "hint": "There are twelve months in a ___." },
+            "live": { "incorrectAnswers": ["love", "olive", "lime"], "hint": "Fish ___ in the water." },
+            "me": { "incorrectAnswers": ["my", "met", "we"], "hint": "Please pass the ball to ___." },
+            "back": { "incorrectAnswers": ["black", "pack", "bake"], "hint": "Put the book ___ on the shelf." },
+            "give": { "incorrectAnswers": ["gave", "live", "five"], "hint": "Please ___ me a hug." },
+            "most": { "incorrectAnswers": ["mist", "post", "must"], "hint": "Who ate the ___ pizza?" },
+            "very": { "incorrectAnswers": ["every", "berry", "ferry"], "hint": "The elephant is ___ big." },
+            "after": { "incorrectAnswers": ["often", "rafter", "alter"], "hint": "We play ___ school." },
+            "thing": { "incorrectAnswers": ["think", "thin", "sing"], "hint": "What is that green ___ in the grass?" },
+            "our": { "incorrectAnswers": ["out", "sour", "four"], "hint": "This is ___ house." },
+            "just": { "incorrectAnswers": ["jest", "dust", "must"], "hint": "I ___ finished my lunch." },
+            "name": { "incorrectAnswers": ["game", "same", "nail"], "hint": "What is your ___?" },
+            "good": { "incorrectAnswers": ["food", "gold", "wood"], "hint": "This soup tastes ___." },
+            "sentence": { "incorrectAnswers": ["sequence", "entrance", "sense"], "hint": "Start every ___ with a capital letter." },
+            "man": { "incorrectAnswers": ["men", "map", "mat"], "hint": "The ___ wore a tall hat." },
+            "think": { "incorrectAnswers": ["thing", "thank", "pink"], "hint": "I ___ it will rain today." },
+            "say": { "incorrectAnswers": ["day", "saw", "stay"], "hint": "What did you ___ to her?" },
+            "great": { "incorrectAnswers": ["greet", "treat", "green"], "hint": "We had a ___ time at the zoo." },
+            "where": { "incorrectAnswers": ["were", "here", "there"], "hint": "___ did you put my book?" },
+            "help": { "incorrectAnswers": ["held", "hello", "yelp"], "hint": "Can you ___ me carry this?" },
+            "through": { "incorrectAnswers": ["though", "tough", "throw"], "hint": "We walked ___ the woods." },
+            "much": { "incorrectAnswers": ["such", "match", "munch"], "hint": "How ___ does this cost?" },
+            "before": { "incorrectAnswers": ["because", "beside", "belong"], "hint": "Wash your hands ___ you eat." },
+            "line": { "incorrectAnswers": ["lion", "lime", "fine"], "hint": "Stand in a straight ___." },
+            "right": { "incorrectAnswers": ["night", "ripe", "bright"], "hint": "Turn ___ at the stop sign." },
+            "too": { "incorrectAnswers": ["toy", "tool", "toe"], "hint": "I want to come ___!" },
+            "mean": { "incorrectAnswers": ["moan", "meat", "bean"], "hint": "Don't be ___ to your sister." },
+            "old": { "incorrectAnswers": ["odd", "cold", "gold"], "hint": "My grandpa is very ___." },
+            "any": { "incorrectAnswers": ["many", "ant", "and"], "hint": "Do you have ___ pets?" },
+            "same": { "incorrectAnswers": ["some", "game", "save"], "hint": "We have the ___ shoes!" },
+            "tell": { "incorrectAnswers": ["tall", "bell", "till"], "hint": "Can you ___ me a story?" },
+            "boy": { "incorrectAnswers": ["bay", "toy", "buy"], "hint": "The ___ kicked the soccer ball." },
+            "follow": { "incorrectAnswers": ["fellow", "hollow", "yellow"], "hint": "Please ___ me to the classroom." },
+            "came": { "incorrectAnswers": ["come", "cake", "game"], "hint": "Grandma ___ to visit us." },
+            "want": { "incorrectAnswers": ["went", "what", "wand"], "hint": "I ___ a glass of milk." },
+            "show": { "incorrectAnswers": ["shoe", "snow", "shop"], "hint": "Can you ___ me your drawing?" },
+            "also": { "incorrectAnswers": ["alto", "else", "always"], "hint": "I like dogs, and I ___ like cats." },
+            "around": { "incorrectAnswers": ["round", "ground", "aground"], "hint": "The kids ran ___ the tree." },
+            "form": { "incorrectAnswers": ["from", "farm", "foam"], "hint": "Please fill out this ___." },
+            "three": { "incorrectAnswers": ["tree", "there", "throw"], "hint": "A triangle has ___ sides." },
+            "small": { "incorrectAnswers": ["smell", "mall", "smile"], "hint": "An ant is very ___." },
+            "set": { "incorrectAnswers": ["sit", "sat", "net"], "hint": "Please ___ the table for dinner." },
+            "put": { "incorrectAnswers": ["pot", "pet", "pat"], "hint": "___ your toys away." },
+            "end": { "incorrectAnswers": ["and", "bend", "ends"], "hint": "That was the ___ of the movie." },
+            "does": { "incorrectAnswers": ["doe", "dose", "goes"], "hint": "What ___ a frog eat?" },
+            "another": { "incorrectAnswers": ["mother", "other", "brother"], "hint": "Can I have ___ cookie?" },
+            "well": { "incorrectAnswers": ["will", "bell", "wall"], "hint": "She sings very ___." },
+            "large": { "incorrectAnswers": ["barge", "lodge", "charge"], "hint": "A whale is a ___ animal." },
+            "must": { "incorrectAnswers": ["most", "mist", "mast"], "hint": "You ___ wear a helmet on your bike." },
+            "big": { "incorrectAnswers": ["bag", "pig", "dig"], "hint": "An elephant is very ___." },
+            "even": { "incorrectAnswers": ["oven", "eve", "seven"], "hint": "Two, four, and six are ___ numbers." },
+            "such": { "incorrectAnswers": ["much", "search", "touch"], "hint": "It was ___ a fun day!" },
+            "because": { "incorrectAnswers": ["became", "beckon", "cause"], "hint": "I wore a coat ___ it was cold." },
+            "turn": { "incorrectAnswers": ["torn", "burn", "tune"], "hint": "It is your ___ to roll the dice." },
+            "here": { "incorrectAnswers": ["hare", "her", "there"], "hint": "Come over ___ and sit down." },
+            "why": { "incorrectAnswers": ["way", "who", "white"], "hint": "___ is the sky blue?" },
+            "ask": { "incorrectAnswers": ["ash", "mask", "task"], "hint": "Raise your hand to ___ a question." },
+            "went": { "incorrectAnswers": ["want", "wet", "sent"], "hint": "We ___ to the beach yesterday." },
+            "men": { "incorrectAnswers": ["man", "hen", "mean"], "hint": "Three ___ fixed the roof." },
+            "read": { "incorrectAnswers": ["road", "bead", "rear"], "hint": "I like to ___ books at bedtime." },
+            "need": { "incorrectAnswers": ["deed", "feed", "neat"], "hint": "Plants ___ water to grow." },
+            "land": { "incorrectAnswers": ["lend", "sand", "hand"], "hint": "The plane will ___ at the airport." },
+            "different": { "incorrectAnswers": ["difficult", "dinner", "distant"], "hint": "Our shirts are ___ colors." },
+            "home": { "incorrectAnswers": ["hole", "hose", "dome"], "hint": "It is time to go ___." },
+            "us": { "incorrectAnswers": ["as", "use", "bus"], "hint": "Come play with ___!" },
+            "move": { "incorrectAnswers": ["more", "love", "mood"], "hint": "Can you ___ your chair closer?" },
+            "try": { "incorrectAnswers": ["tray", "cry", "dry"], "hint": "___ again if you miss." },
+            "kind": { "incorrectAnswers": ["kid", "find", "king"], "hint": "Be ___ to your friends." },
+            "hand": { "incorrectAnswers": ["hard", "band", "sand"], "hint": "Raise your ___ if you know." },
+            "picture": { "incorrectAnswers": ["mixture", "pasture", "puncture"], "hint": "I drew a ___ of my cat." },
+            "again": { "incorrectAnswers": ["against", "gain", "agent"], "hint": "Can we play that song ___?" },
+            "change": { "incorrectAnswers": ["charge", "chance", "chain"], "hint": "Let's ___ into our pajamas." },
+            "off": { "incorrectAnswers": ["of", "oft", "cuff"], "hint": "Turn ___ the lights." },
+            "play": { "incorrectAnswers": ["pray", "clay", "plan"], "hint": "Let's ___ tag at recess." },
+            "spell": { "incorrectAnswers": ["spill", "smell", "shell"], "hint": "Can you ___ your name?" },
+            "air": { "incorrectAnswers": ["ear", "fair", "are"], "hint": "Birds fly through the ___." },
+            "away": { "incorrectAnswers": ["way", "awake", "sway"], "hint": "The dog ran ___ from the bath." },
+            "animal": { "incorrectAnswers": ["anvil", "camel", "annual"], "hint": "A lion is a wild ___." },
+            "house": { "incorrectAnswers": ["horse", "mouse", "hose"], "hint": "We live in a big blue ___." },
+            "point": { "incorrectAnswers": ["paint", "pint", "joint"], "hint": "Don't ___ at people." },
+            "page": { "incorrectAnswers": ["cage", "pale", "pace"], "hint": "Turn to the next ___ of the book." },
+            "letter": { "incorrectAnswers": ["litter", "better", "ladder"], "hint": "A is the first ___ of the alphabet." },
+            "mother": { "incorrectAnswers": ["other", "brother", "bother"], "hint": "My ___ makes the best pancakes." },
+            "answer": { "incorrectAnswers": ["anchor", "dancer", "antler"], "hint": "Raise your hand if you know the ___." },
+            "found": { "incorrectAnswers": ["fond", "round", "sound"], "hint": "I ___ a coin on the sidewalk." },
+            "study": { "incorrectAnswers": ["sturdy", "steady", "stuffy"], "hint": "I need to ___ for my spelling test." },
+            "still": { "incorrectAnswers": ["stall", "steel", "spill"], "hint": "Please sit ___ for the photo." },
+            "learn": { "incorrectAnswers": ["lean", "earn", "yearn"], "hint": "I want to ___ how to swim." },
+            "should": { "incorrectAnswers": ["shoulder", "could", "shout"], "hint": "You ___ brush your teeth every night." },
+            "America": { "incorrectAnswers": ["Africa", "Armenia", "Amelia"], "hint": "The United States of ___." },
+            "world": { "incorrectAnswers": ["word", "wild", "whirl"], "hint": "There are seven continents in the ___." }
+          }
+        },
+        "vocabulary-grade4": {
+          "cards": {
+            "high": { "incorrectAnswers": ["hide", "hip", "sigh"], "hint": "The kite flew ___ in the sky." },
+            "every": { "incorrectAnswers": ["very", "ever", "ivory"], "hint": "I brush my teeth ___ night." },
+            "near": { "incorrectAnswers": ["neat", "hear", "wear"], "hint": "The bus stop is ___ my house." },
+            "add": { "incorrectAnswers": ["and", "odd", "dad"], "hint": "Can you ___ two and three?" },
+            "food": { "incorrectAnswers": ["foot", "fool", "good"], "hint": "Dogs need ___ and water." },
+            "between": { "incorrectAnswers": ["beneath", "beyond", "betting"], "hint": "The cat sat ___ the two chairs." },
+            "own": { "incorrectAnswers": ["owe", "town", "owl"], "hint": "I have my ___ room." },
+            "below": { "incorrectAnswers": ["bellow", "elbow", "blow"], "hint": "The fish swim ___ the ice." },
+            "country": { "incorrectAnswers": ["county", "counter", "cutlery"], "hint": "Canada is a big ___." },
+            "plant": { "incorrectAnswers": ["plan", "planet", "giant"], "hint": "We will ___ seeds in the garden." },
+            "last": { "incorrectAnswers": ["fast", "lost", "list"], "hint": "Z is the ___ letter of the alphabet." },
+            "school": { "incorrectAnswers": ["spool", "cool", "scoop"], "hint": "We ride the bus to ___." },
+            "father": { "incorrectAnswers": ["feather", "rather", "fathom"], "hint": "My ___ and I went fishing." },
+            "keep": { "incorrectAnswers": ["kept", "peek", "keel"], "hint": "Can I ___ the puppy?" },
+            "tree": { "incorrectAnswers": ["three", "free", "true"], "hint": "A bird built a nest in the ___." },
+            "never": { "incorrectAnswers": ["clever", "fever", "even"], "hint": "I will ___ forget this day." },
+            "start": { "incorrectAnswers": ["star", "smart", "stare"], "hint": "The race will ___ soon." },
+            "city": { "incorrectAnswers": ["kitty", "pity", "cite"], "hint": "New York is a big ___." },
+            "earth": { "incorrectAnswers": ["earn", "birth", "heart"], "hint": "We live on planet ___." },
+            "eyes": { "incorrectAnswers": ["eggs", "ears", "yes"], "hint": "Close your ___ and go to sleep." },
+            "light": { "incorrectAnswers": ["night", "tight", "lift"], "hint": "Turn on the ___ so we can see." },
+            "thought": { "incorrectAnswers": ["though", "taught", "bought"], "hint": "I ___ about my dog all day." },
+            "head": { "incorrectAnswers": ["heed", "heard", "bead"], "hint": "Wear a hat on your ___." },
+            "under": { "incorrectAnswers": ["thunder", "wonder", "undo"], "hint": "The cat hid ___ the bed." },
+            "story": { "incorrectAnswers": ["store", "stormy", "starry"], "hint": "Grandma read me a bedtime ___." },
+            "saw": { "incorrectAnswers": ["sew", "raw", "was"], "hint": "I ___ a rainbow after the rain." },
+            "left": { "incorrectAnswers": ["lift", "felt", "loft"], "hint": "Turn ___ at the corner." },
+            "don't": { "incorrectAnswers": ["donut", "doesn't", "dent"], "hint": "Please ___ touch the hot stove." },
+            "few": { "incorrectAnswers": ["flew", "dew", "fee"], "hint": "I have a ___ friends coming over." },
+            "while": { "incorrectAnswers": ["white", "whale", "mile"], "hint": "I read a book ___ I waited." },
+            "along": { "incorrectAnswers": ["long", "alone", "among"], "hint": "We walked ___ the beach." },
+            "might": { "incorrectAnswers": ["night", "mitt", "fight"], "hint": "It ___ rain later today." },
+            "close": { "incorrectAnswers": ["closet", "chose", "cloud"], "hint": "Please ___ the door." },
+            "something": { "incorrectAnswers": ["somewhere", "nothing", "someone"], "hint": "I hear ___ outside!" },
+            "seem": { "incorrectAnswers": ["seen", "stem", "sum"], "hint": "You ___ happy today." },
+            "next": { "incorrectAnswers": ["text", "nest", "neck"], "hint": "Who is ___ in line?" },
+            "hard": { "incorrectAnswers": ["herd", "card", "hand"], "hint": "This rock is very ___." },
+            "open": { "incorrectAnswers": ["oven", "oxen", "opal"], "hint": "Please ___ the window." },
+            "example": { "incorrectAnswers": ["sample", "exam", "ample"], "hint": "Can you give me an ___?" },
+            "begin": { "incorrectAnswers": ["began", "begun", "beg"], "hint": "Class will ___ at eight." },
+            "life": { "incorrectAnswers": ["lift", "line", "wife"], "hint": "I have lived here my whole ___." },
+            "always": { "incorrectAnswers": ["away", "allows", "hallways"], "hint": "I ___ eat breakfast in the morning." },
+            "those": { "incorrectAnswers": ["these", "toes", "nose"], "hint": "Are ___ your boots by the door?" },
+            "both": { "incorrectAnswers": ["bath", "booth", "boat"], "hint": "I like ___ cats and dogs." },
+            "paper": { "incorrectAnswers": ["pepper", "paddle", "caper"], "hint": "Write your name on the ___." },
+            "together": { "incorrectAnswers": ["gather", "tether", "toddler"], "hint": "Let's play ___." },
+            "got": { "incorrectAnswers": ["get", "goat", "hot"], "hint": "I ___ a new bike." },
+            "group": { "incorrectAnswers": ["grape", "grip", "scoop"], "hint": "We worked in a small ___." },
+            "often": { "incorrectAnswers": ["soften", "offer", "open"], "hint": "How ___ do you swim?" },
+            "run": { "incorrectAnswers": ["ran", "sun", "rug"], "hint": "I can ___ very fast." },
+            "important": { "incorrectAnswers": ["impatient", "imported", "impression"], "hint": "It is ___ to be kind." },
+            "until": { "incorrectAnswers": ["untie", "unite", "anvil"], "hint": "Wait ___ the light turns green." },
+            "children": { "incorrectAnswers": ["chicken", "chill", "childhood"], "hint": "The ___ played on the swings." },
+            "side": { "incorrectAnswers": ["slide", "site", "ride"], "hint": "Walk on the ___ of the road." },
+            "feet": { "incorrectAnswers": ["feel", "meet", "fleet"], "hint": "I have two ___ and ten toes." },
+            "car": { "incorrectAnswers": ["care", "cart", "jar"], "hint": "Mom drove the ___ to the store." },
+            "mile": { "incorrectAnswers": ["mole", "mill", "smile"], "hint": "We ran one ___ at the track." },
+            "night": { "incorrectAnswers": ["light", "knit", "nine"], "hint": "The stars come out at ___." },
+            "walk": { "incorrectAnswers": ["wake", "wall", "talk"], "hint": "Let's ___ the dog." },
+            "white": { "incorrectAnswers": ["wide", "while", "bite"], "hint": "Snow is cold and ___." },
+            "sea": { "incorrectAnswers": ["seat", "sew", "tea"], "hint": "Fish and whales live in the ___." },
+            "began": { "incorrectAnswers": ["begin", "vegan", "bacon"], "hint": "The movie ___ at seven." },
+            "grow": { "incorrectAnswers": ["glow", "grew", "crow"], "hint": "Plants need sun to ___." },
+            "took": { "incorrectAnswers": ["look", "tool", "tick"], "hint": "I ___ my dog for a walk." },
+            "river": { "incorrectAnswers": ["liver", "rover", "diver"], "hint": "We went fishing in the ___." },
+            "four": { "incorrectAnswers": ["fork", "hour", "floor"], "hint": "A dog has ___ legs." },
+            "carry": { "incorrectAnswers": ["cherry", "curry", "berry"], "hint": "Can you ___ this heavy box?" },
+            "state": { "incorrectAnswers": ["skate", "plate", "stay"], "hint": "Texas is a big ___." },
+            "once": { "incorrectAnswers": ["ounce", "onset", "dance"], "hint": "___ upon a time, there was a king." },
+            "book": { "incorrectAnswers": ["look", "boot", "cook"], "hint": "I read a ___ about frogs." },
+            "hear": { "incorrectAnswers": ["hair", "ear", "heat"], "hint": "Can you ___ the birds singing?" },
+            "stop": { "incorrectAnswers": ["step", "shop", "top"], "hint": "Cars must ___ at a red light." },
+            "without": { "incorrectAnswers": ["within", "outfit", "withhold"], "hint": "I can't go ___ my coat." },
+            "second": { "incorrectAnswers": ["secret", "season", "segment"], "hint": "I came in ___ place in the race." },
+            "later": { "incorrectAnswers": ["latter", "letter", "water"], "hint": "See you ___!" },
+            "miss": { "incorrectAnswers": ["mess", "kiss", "mist"], "hint": "I ___ my grandma when she is away." },
+            "idea": { "incorrectAnswers": ["ideal", "India", "item"], "hint": "I have a great ___!" },
+            "enough": { "incorrectAnswers": ["rough", "tough", "engulf"], "hint": "Do we have ___ cake for everyone?" },
+            "eat": { "incorrectAnswers": ["ate", "beat", "seat"], "hint": "It is time to ___ dinner." },
+            "face": { "incorrectAnswers": ["fact", "race", "fade"], "hint": "Wash your ___ before bed." },
+            "watch": { "incorrectAnswers": ["witch", "match", "wash"], "hint": "Let's ___ a movie tonight." },
+            "far": { "incorrectAnswers": ["fur", "fair", "jar"], "hint": "The moon is very ___ away." },
+            "Indian": { "incorrectAnswers": ["Indiana", "Italian", "Iranian"], "hint": "The ___ Ocean is warm." },
+            "really": { "incorrectAnswers": ["rally", "rely", "realty"], "hint": "That was a ___ fun game!" },
+            "almost": { "incorrectAnswers": ["utmost", "always", "mostly"], "hint": "We are ___ home." },
+            "let": { "incorrectAnswers": ["lot", "led", "jet"], "hint": "Please ___ me go first." },
+            "above": { "incorrectAnswers": ["about", "abuse", "alcove"], "hint": "The bird flew ___ the trees." },
+            "girl": { "incorrectAnswers": ["grill", "curl", "gill"], "hint": "The ___ wore a red dress." },
+            "sometimes": { "incorrectAnswers": ["something", "somewhere", "someone"], "hint": "I ___ walk to school." },
+            "mountain": { "incorrectAnswers": ["fountain", "mounting", "maintain"], "hint": "We climbed to the top of the ___." },
+            "cut": { "incorrectAnswers": ["cat", "cute", "cup"], "hint": "Use scissors to ___ the paper." },
+            "young": { "incorrectAnswers": ["yarn", "yawn", "tongue"], "hint": "A puppy is a ___ dog." },
+            "talk": { "incorrectAnswers": ["walk", "tall", "tack"], "hint": "Please don't ___ during the test." },
+            "soon": { "incorrectAnswers": ["moon", "son", "noon"], "hint": "Dinner will be ready ___." },
+            "list": { "incorrectAnswers": ["lost", "last", "fist"], "hint": "Make a ___ of things to buy." },
+            "song": { "incorrectAnswers": ["sing", "long", "sung"], "hint": "Let's sing a ___." },
+            "being": { "incorrectAnswers": ["begin", "bring", "beam"], "hint": "Thank you for ___ so kind." },
+            "leave": { "incorrectAnswers": ["leaf", "live", "love"], "hint": "Please don't ___ without me." },
+            "family": { "incorrectAnswers": ["famine", "finally", "flamingo"], "hint": "My ___ has five people." },
+            "it's": { "incorrectAnswers": ["it", "sits", "eats"], "hint": "___ raining outside." }
+          }
+        }
+      },
+      "sightWords": {
+        "4": ["high", "every", "near", "add", "food", "between", "own", "below", "country", "plant", "last", "school", "father", "keep", "tree", "never", "start", "city", "earth", "eyes", "light", "thought", "head", "under", "story", "saw", "left", "don't", "few", "while", "along", "might", "close", "something", "seem", "next", "hard", "open", "example", "begin", "life", "always", "those", "both", "paper", "together", "got", "group", "often", "run", "important", "until", "children", "side", "feet", "car", "mile", "night", "walk", "white", "sea", "began", "grow", "took", "river", "four", "carry", "state", "once", "book", "hear", "stop", "without", "second", "later", "miss", "idea", "enough", "eat", "face", "watch", "far", "Indian", "really", "almost", "let", "above", "girl", "sometimes", "mountain", "cut", "young", "talk", "soon", "list", "song", "being", "leave", "family", "it's"]
+      }
+    },
+    "geography": {
+      "nearbyCountries": 6,
+      "question": "Which country is highlighted?",
+      "worldRegions": {
+        "north-america-continental": {
+          "continent": "north-america",
+          "countries": [
+            { "name": "Belize", "id": "084", "capital": "Belmopan" },
+            { "name": "Canada", "id": "124", "capital": "Ottawa" },
+            { "name": "Costa Rica", "id": "188", "capital": "San José" },
+            { "name": "El Salvador", "id": "222", "capital": "San Salvador" },
+            { "name": "Guatemala", "id": "320", "capital": "Guatemala City" },
+            { "name": "Honduras", "id": "340", "capital": "Tegucigalpa" },
+            { "name": "Mexico", "id": "484", "capital": "Mexico City" },
+            { "name": "Nicaragua", "id": "558", "capital": "Managua" },
+            { "name": "Panama", "id": "591", "capital": "Panama City" },
+            { "name": "United States", "id": "840", "capital": "Washington, D.C." }
+          ]
+        },
+        "north-america-islands": {
+          "continent": "north-america",
+          "countries": [
+            { "name": "Antigua and Barbuda", "id": "028", "capital": "St. John's" },
+            { "name": "Bahamas", "id": "044", "capital": "Nassau" },
+            { "name": "Barbados", "id": "052", "capital": "Bridgetown" },
+            { "name": "Cuba", "id": "192", "capital": "Havana" },
+            { "name": "Dominica", "id": "212", "capital": "Roseau" },
+            { "name": "Dominican Republic", "id": "214", "capital": "Santo Domingo" },
+            { "name": "Grenada", "id": "308", "capital": "St. George's" },
+            { "name": "Haiti", "id": "332", "capital": "Port-au-Prince" },
+            { "name": "Jamaica", "id": "388", "capital": "Kingston" },
+            { "name": "Saint Kitts and Nevis", "id": "659", "capital": "Basseterre" },
+            { "name": "Saint Lucia", "id": "662", "capital": "Castries" },
+            { "name": "Saint Vincent and the Grenadines", "id": "670", "capital": "Kingstown" },
+            { "name": "Trinidad and Tobago", "id": "780", "capital": "Port of Spain" }
+          ]
+        },
+        "south-america": {
+          "continent": "south-america",
+          "countries": [
+            { "name": "Argentina", "id": "032", "capital": "Buenos Aires" },
+            { "name": "Bolivia", "id": "068", "capital": "Sucre" },
+            { "name": "Brazil", "id": "076", "capital": "Brasília" },
+            { "name": "Chile", "id": "152", "capital": "Santiago" },
+            { "name": "Colombia", "id": "170", "capital": "Bogotá" },
+            { "name": "Ecuador", "id": "218", "capital": "Quito" },
+            { "name": "Guyana", "id": "328", "capital": "Georgetown" },
+            { "name": "Paraguay", "id": "600", "capital": "Asunción" },
+            { "name": "Peru", "id": "604", "capital": "Lima" },
+            { "name": "Suriname", "id": "740", "capital": "Paramaribo" },
+            { "name": "Uruguay", "id": "858", "capital": "Montevideo" },
+            { "name": "Venezuela", "id": "862", "capital": "Caracas" }
+          ]
+        },
+        "europe-west": {
+          "continent": "europe",
+          "countries": [
+            { "name": "Andorra", "id": "020", "capital": "Andorra la Vella" },
+            { "name": "Austria", "id": "040", "capital": "Vienna" },
+            { "name": "Belgium", "id": "056", "capital": "Brussels" },
+            { "name": "Denmark", "id": "208", "capital": "Copenhagen" },
+            { "name": "Finland", "id": "246", "capital": "Helsinki" },
+            { "name": "France", "id": "250", "capital": "Paris" },
+            { "name": "Germany", "id": "276", "capital": "Berlin" },
+            { "name": "Iceland", "id": "352", "capital": "Reykjavík" },
+            { "name": "Ireland", "id": "372", "capital": "Dublin" },
+            { "name": "Italy", "id": "380", "capital": "Rome" },
+            { "name": "Liechtenstein", "id": "438", "capital": "Vaduz" },
+            { "name": "Luxembourg", "id": "442", "capital": "Luxembourg" },
+            { "name": "Malta", "id": "470", "capital": "Valletta" },
+            { "name": "Monaco", "id": "492", "capital": "Monaco" },
+            { "name": "Netherlands", "id": "528", "capital": "Amsterdam" },
+            { "name": "Norway", "id": "578", "capital": "Oslo" },
+            { "name": "Portugal", "id": "620", "capital": "Lisbon" },
+            { "name": "San Marino", "id": "674", "capital": "San Marino" },
+            { "name": "Spain", "id": "724", "capital": "Madrid" },
+            { "name": "Sweden", "id": "752", "capital": "Stockholm" },
+            { "name": "Switzerland", "id": "756", "capital": "Bern" },
+            { "name": "United Kingdom", "id": "826", "capital": "London" },
+            { "name": "Vatican City", "id": "336", "capital": "Vatican City" }
+          ]
+        },
+        "europe-east": {
+          "continent": "europe",
+          "countries": [
+            { "name": "Albania", "id": "008", "capital": "Tirana" },
+            { "name": "Belarus", "id": "112", "capital": "Minsk" },
+            { "name": "Bosnia and Herzegovina", "id": "070", "capital": "Sarajevo" },
+            { "name": "Bulgaria", "id": "100", "capital": "Sofia" },
+            { "name": "Croatia", "id": "191", "capital": "Zagreb" },
+            { "name": "Cyprus", "id": "196", "capital": "Nicosia" },
+            { "name": "Czechia", "id": "203", "capital": "Prague" },
+            { "name": "Estonia", "id": "233", "capital": "Tallinn" },
+            { "name": "Greece", "id": "300", "capital": "Athens" },
+            { "name": "Hungary", "id": "348", "capital": "Budapest" },
+            { "name": "Latvia", "id": "428", "capital": "Riga" },
+            { "name": "Lithuania", "id": "440", "capital": "Vilnius" },
+            { "name": "Moldova", "id": "498", "capital": "Chișinău" },
+            { "name": "Montenegro", "id": "499", "capital": "Podgorica" },
+            { "name": "North Macedonia", "id": "807", "capital": "Skopje" },
+            { "name": "Poland", "id": "616", "capital": "Warsaw" },
+            { "name": "Romania", "id": "642", "capital": "Bucharest" },
+            { "name": "Russia", "id": "643", "capital": "Moscow" },
+            { "name": "Serbia", "id": "688", "capital": "Belgrade" },
+            { "name": "Slovakia", "id": "703", "capital": "Bratislava" },
+            { "name": "Slovenia", "id": "705", "capital": "Ljubljana" },
+            { "name": "Ukraine", "id": "804", "capital": "Kyiv" }
+          ]
+        },
+        "africa-north": {
+          "continent": "africa",
+          "countries": [
+            { "name": "Algeria", "id": "012", "capital": "Algiers" },
+            { "name": "Burkina Faso", "id": "854", "capital": "Ouagadougou" },
+            { "name": "Cabo Verde", "id": "132", "capital": "Praia" },
+            { "name": "Chad", "id": "148", "capital": "N'Djamena" },
+            { "name": "Djibouti", "id": "262", "capital": "Djibouti" },
+            { "name": "Egypt", "id": "818", "capital": "Cairo" },
+            { "name": "Eritrea", "id": "232", "capital": "Asmara" },
+            { "name": "Ethiopia", "id": "231", "capital": "Addis Ababa" },
+            { "name": "Gambia", "id": "270", "capital": "Banjul" },
+            { "name": "Libya", "id": "434", "capital": "Tripoli" },
+            { "name": "Mali", "id": "466", "capital": "Bamako" },
+            { "name": "Mauritania", "id": "478", "capital": "Nouakchott" },
+            { "name": "Morocco", "id": "504", "capital": "Rabat" },
+            { "name": "Niger", "id": "562", "capital": "Niamey" },
+            { "name": "Senegal", "id": "686", "capital": "Dakar" },
+            { "name": "Somalia", "id": "706", "capital": "Mogadishu" },
+            { "name": "Sudan", "id": "729", "capital": "Khartoum" },
+            { "name": "Tunisia", "id": "788", "capital": "Tunis" }
+          ]
+        },
+        "africa-central": {
+          "continent": "africa",
+          "countries": [
+            { "name": "Benin", "id": "204", "capital": "Porto-Novo" },
+            { "name": "Burundi", "id": "108", "capital": "Gitega" },
+            { "name": "Cameroon", "id": "120", "capital": "Yaoundé" },
+            { "name": "Central African Republic", "id": "140", "capital": "Bangui" },
+            { "name": "Côte d'Ivoire", "id": "384", "capital": "Yamoussoukro" },
+            { "name": "Democratic Republic of the Congo", "id": "180", "capital": "Kinshasa" },
+            { "name": "Equatorial Guinea", "id": "226", "capital": "Malabo" },
+            { "name": "Gabon", "id": "266", "capital": "Libreville" },
+            { "name": "Ghana", "id": "288", "capital": "Accra" },
+            { "name": "Guinea", "id": "324", "capital": "Conakry" },
+            { "name": "Guinea-Bissau", "id": "624", "capital": "Bissau" },
+            { "name": "Kenya", "id": "404", "capital": "Nairobi" },
+            { "name": "Liberia", "id": "430", "capital": "Monrovia" },
+            { "name": "Nigeria", "id": "566", "capital": "Abuja" },
+            { "name": "Republic of the Congo", "id": "178", "capital": "Brazzaville" },
+            { "name": "Rwanda", "id": "646", "capital": "Kigali" },
+            { "name": "São Tomé and Príncipe", "id": "678", "capital": "São Tomé" },
+            { "name": "Sierra Leone", "id": "694", "capital": "Freetown" },
+            { "name": "South Sudan", "id": "728", "capital": "Juba" },
+            { "name": "Togo", "id": "768", "capital": "Lomé" },
+            { "name": "Uganda", "id": "800", "capital": "Kampala" }
+          ]
+        },
+        "africa-south": {
+          "continent": "africa",
+          "countries": [
+            { "name": "Angola", "id": "024", "capital": "Luanda" },
+            { "name": "Botswana", "id": "072", "capital": "Gaborone" },
+            { "name": "Comoros", "id": "174", "capital": "Moroni" },
+            { "name": "Eswatini", "id": "748", "capital": "Mbabane" },
+            { "name": "Lesotho", "id": "426", "capital": "Maseru" },
+            { "name": "Madagascar", "id": "450", "capital": "Antananarivo" },
+            { "name": "Malawi", "id": "454", "capital": "Lilongwe" },
+            { "name": "Mauritius", "id": "480", "capital": "Port Louis" },
+            { "name": "Mozambique", "id": "508", "capital": "Maputo" },
+            { "name": "Namibia", "id": "516", "capital": "Windhoek" },
+            { "name": "Seychelles", "id": "690", "capital": "Victoria" },
+            { "name": "South Africa", "id": "710", "capital": "Pretoria" },
+            { "name": "Tanzania", "id": "834", "capital": "Dodoma" },
+            { "name": "Zambia", "id": "894", "capital": "Lusaka" },
+            { "name": "Zimbabwe", "id": "716", "capital": "Harare" }
+          ]
+        },
+        "asia-west": {
+          "continent": "asia",
+          "countries": [
+            { "name": "Afghanistan", "id": "004", "capital": "Kabul" },
+            { "name": "Armenia", "id": "051", "capital": "Yerevan" },
+            { "name": "Azerbaijan", "id": "031", "capital": "Baku" },
+            { "name": "Bahrain", "id": "048", "capital": "Manama" },
+            { "name": "Georgia", "id": "268", "capital": "Tbilisi" },
+            { "name": "Iran", "id": "364", "capital": "Tehran" },
+            { "name": "Iraq", "id": "368", "capital": "Baghdad" },
+            { "name": "Israel", "id": "376", "capital": "Jerusalem" },
+            { "name": "Jordan", "id": "400", "capital": "Amman" },
+            { "name": "Kazakhstan", "id": "398", "capital": "Astana" },
+            { "name": "Kuwait", "id": "414", "capital": "Kuwait City" },
+            { "name": "Kyrgyzstan", "id": "417", "capital": "Bishkek" },
+            { "name": "Lebanon", "id": "422", "capital": "Beirut" },
+            { "name": "Oman", "id": "512", "capital": "Muscat" },
+            { "name": "Pakistan", "id": "586", "capital": "Islamabad" },
+            { "name": "Palestine", "id": "275", "capital": "East Jerusalem" },
+            { "name": "Qatar", "id": "634", "capital": "Doha" },
+            { "name": "Saudi Arabia", "id": "682", "capital": "Riyadh" },
+            { "name": "Syria", "id": "760", "capital": "Damascus" },
+            { "name": "Tajikistan", "id": "762", "capital": "Dushanbe" },
+            { "name": "Turkey", "id": "792", "capital": "Ankara" },
+            { "name": "Turkmenistan", "id": "795", "capital": "Ashgabat" },
+            { "name": "United Arab Emirates", "id": "784", "capital": "Abu Dhabi" },
+            { "name": "Uzbekistan", "id": "860", "capital": "Tashkent" },
+            { "name": "Yemen", "id": "887", "capital": "Sana'a" }
+          ]
+        },
+        "asia-east": {
+          "continent": "asia",
+          "countries": [
+            { "name": "Bangladesh", "id": "050", "capital": "Dhaka" },
+            { "name": "Bhutan", "id": "064", "capital": "Thimphu" },
+            { "name": "Brunei", "id": "096", "capital": "Bandar Seri Begawan" },
+            { "name": "Cambodia", "id": "116", "capital": "Phnom Penh" },
+            { "name": "China", "id": "156", "capital": "Beijing" },
+            { "name": "India", "id": "356", "capital": "New Delhi" },
+            { "name": "Indonesia", "id": "360", "capital": "Jakarta" },
+            { "name": "Japan", "id": "392", "capital": "Tokyo" },
+            { "name": "Laos", "id": "418", "capital": "Vientiane" },
+            { "name": "Malaysia", "id": "458", "capital": "Kuala Lumpur" },
+            { "name": "Maldives", "id": "462", "capital": "Malé" },
+            { "name": "Mongolia", "id": "496", "capital": "Ulaanbaatar" },
+            { "name": "Myanmar", "id": "104", "capital": "Naypyidaw" },
+            { "name": "Nepal", "id": "524", "capital": "Kathmandu" },
+            { "name": "North Korea", "id": "408", "capital": "Pyongyang" },
+            { "name": "Philippines", "id": "608", "capital": "Manila" },
+            { "name": "Singapore", "id": "702", "capital": "Singapore" },
+            { "name": "South Korea", "id": "410", "capital": "Seoul" },
+            { "name": "Sri Lanka", "id": "144", "capital": "Sri Jayawardenepura Kotte" },
+            { "name": "Thailand", "id": "764", "capital": "Bangkok" },
+            { "name": "Timor-Leste", "id": "626", "capital": "Dili" },
+            { "name": "Vietnam", "id": "704", "capital": "Hanoi" }
+          ]
+        },
+        "oceania": {
+          "continent": "oceania",
+          "countries": [
+            { "name": "Australia", "id": "036", "capital": "Canberra" },
+            { "name": "Fiji", "id": "242", "capital": "Suva" },
+            { "name": "Kiribati", "id": "296", "capital": "South Tarawa" },
+            { "name": "Marshall Islands", "id": "584", "capital": "Majuro" },
+            { "name": "Micronesia", "id": "583", "capital": "Palikir" },
+            { "name": "Nauru", "id": "520", "capital": "Yaren" },
+            { "name": "New Zealand", "id": "554", "capital": "Wellington" },
+            { "name": "Palau", "id": "585", "capital": "Ngerulmud" },
+            { "name": "Papua New Guinea", "id": "598", "capital": "Port Moresby" },
+            { "name": "Samoa", "id": "882", "capital": "Apia" },
+            { "name": "Solomon Islands", "id": "090", "capital": "Honiara" },
+            { "name": "Tonga", "id": "776", "capital": "Nuku'alofa" },
+            { "name": "Vanuatu", "id": "548", "capital": "Port Vila" }
+          ]
+        }
+      },
+      "nearbyStates": 6,
+      "stateQuestion": "Which state is highlighted?",
+      "capitalQuestion": "What is the capital of {state}?",
+      "unitedStates": [
+        { "name": "Alabama", "capital": "Montgomery", "region": "southeast", "capitalCoordinates": [-86.300, 32.377] },
+        { "name": "Alaska", "capital": "Juneau", "region": "west", "capitalCoordinates": [-134.420, 58.302] },
+        { "name": "Arizona", "capital": "Phoenix", "region": "southwest", "capitalCoordinates": [-112.074, 33.448] },
+        { "name": "Arkansas", "capital": "Little Rock", "region": "southeast", "capitalCoordinates": [-92.289, 34.746] },
+        { "name": "California", "capital": "Sacramento", "region": "west", "capitalCoordinates": [-121.494, 38.576] },
+        { "name": "Colorado", "capital": "Denver", "region": "west", "capitalCoordinates": [-104.985, 39.739] },
+        { "name": "Connecticut", "capital": "Hartford", "region": "northeast", "capitalCoordinates": [-72.682, 41.764] },
+        { "name": "Delaware", "capital": "Dover", "region": "northeast", "capitalCoordinates": [-75.524, 39.158] },
+        { "name": "Florida", "capital": "Tallahassee", "region": "southeast", "capitalCoordinates": [-84.281, 30.438] },
+        { "name": "Georgia", "capital": "Atlanta", "region": "southeast", "capitalCoordinates": [-84.388, 33.749] },
+        { "name": "Hawaii", "capital": "Honolulu", "region": "west", "capitalCoordinates": [-157.858, 21.307] },
+        { "name": "Idaho", "capital": "Boise", "region": "west", "capitalCoordinates": [-116.202, 43.615] },
+        { "name": "Illinois", "capital": "Springfield", "region": "midwest", "capitalCoordinates": [-89.654, 39.798] },
+        { "name": "Indiana", "capital": "Indianapolis", "region": "midwest", "capitalCoordinates": [-86.158, 39.768] },
+        { "name": "Iowa", "capital": "Des Moines", "region": "midwest", "capitalCoordinates": [-93.604, 41.591] },
+        { "name": "Kansas", "capital": "Topeka", "region": "midwest", "capitalCoordinates": [-95.678, 39.048] },
+        { "name": "Kentucky", "capital": "Frankfort", "region": "southeast", "capitalCoordinates": [-84.873, 38.200] },
+        { "name": "Louisiana", "capital": "Baton Rouge", "region": "southeast", "capitalCoordinates": [-91.187, 30.451] },
+        { "name": "Maine", "capital": "Augusta", "region": "northeast", "capitalCoordinates": [-69.780, 44.311] },
+        { "name": "Maryland", "capital": "Annapolis", "region": "northeast", "capitalCoordinates": [-76.491, 38.978] },
+        { "name": "Massachusetts", "capital": "Boston", "region": "northeast", "capitalCoordinates": [-71.058, 42.360] },
+        { "name": "Michigan", "capital": "Lansing", "region": "midwest", "capitalCoordinates": [-84.555, 42.733] },
+        { "name": "Minnesota", "capital": "Saint Paul", "region": "midwest", "capitalCoordinates": [-93.090, 44.954] },
+        { "name": "Mississippi", "capital": "Jackson", "region": "southeast", "capitalCoordinates": [-90.185, 32.299] },
+        { "name": "Missouri", "capital": "Jefferson City", "region": "midwest", "capitalCoordinates": [-92.173, 38.577] },
+        { "name": "Montana", "capital": "Helena", "region": "west", "capitalCoordinates": [-112.039, 46.589] },
+        { "name": "Nebraska", "capital": "Lincoln", "region": "midwest", "capitalCoordinates": [-96.703, 40.814] },
+        { "name": "Nevada", "capital": "Carson City", "region": "west", "capitalCoordinates": [-119.767, 39.164] },
+        { "name": "New Hampshire", "capital": "Concord", "region": "northeast", "capitalCoordinates": [-71.538, 43.207] },
+        { "name": "New Jersey", "capital": "Trenton", "region": "northeast", "capitalCoordinates": [-74.756, 40.221] },
+        { "name": "New Mexico", "capital": "Santa Fe", "region": "southwest", "capitalCoordinates": [-105.938, 35.687] },
+        { "name": "New York", "capital": "Albany", "region": "northeast", "capitalCoordinates": [-73.757, 42.653] },
+        { "name": "North Carolina", "capital": "Raleigh", "region": "southeast", "capitalCoordinates": [-78.639, 35.780] },
+        { "name": "North Dakota", "capital": "Bismarck", "region": "midwest", "capitalCoordinates": [-100.784, 46.808] },
+        { "name": "Ohio", "capital": "Columbus", "region": "midwest", "capitalCoordinates": [-82.999, 39.961] },
+        { "name": "Oklahoma", "capital": "Oklahoma City", "region": "southwest", "capitalCoordinates": [-97.516, 35.468] },
+        { "name": "Oregon", "capital": "Salem", "region": "west", "capitalCoordinates": [-123.035, 44.943] },
+        { "name": "Pennsylvania", "capital": "Harrisburg", "region": "northeast", "capitalCoordinates": [-76.884, 40.264] },
+        { "name": "Rhode Island", "capital": "Providence", "region": "northeast", "capitalCoordinates": [-71.413, 41.824] },
+        { "name": "South Carolina", "capital": "Columbia", "region": "southeast", "capitalCoordinates": [-81.035, 34.000] },
+        { "name": "South Dakota", "capital": "Pierre", "region": "midwest", "capitalCoordinates": [-100.351, 44.368] },
+        { "name": "Tennessee", "capital": "Nashville", "region": "southeast", "capitalCoordinates": [-86.781, 36.163] },
+        { "name": "Texas", "capital": "Austin", "region": "southwest", "capitalCoordinates": [-97.743, 30.267] },
+        { "name": "Utah", "capital": "Salt Lake City", "region": "west", "capitalCoordinates": [-111.891, 40.761] },
+        { "name": "Vermont", "capital": "Montpelier", "region": "northeast", "capitalCoordinates": [-72.576, 44.260] },
+        { "name": "Virginia", "capital": "Richmond", "region": "southeast", "capitalCoordinates": [-77.436, 37.541] },
+        { "name": "Washington", "capital": "Olympia", "region": "west", "capitalCoordinates": [-122.900, 47.038] },
+        { "name": "West Virginia", "capital": "Charleston", "region": "southeast", "capitalCoordinates": [-81.633, 38.350] },
+        { "name": "Wisconsin", "capital": "Madison", "region": "midwest", "capitalCoordinates": [-89.384, 43.074] },
+        { "name": "Wyoming", "capital": "Cheyenne", "region": "west", "capitalCoordinates": [-104.820, 41.140] }
+      ]
+    },
+    "angular": {
+      "cardSets": {
+        "beginner": {
+          "show": "value",
+          "cards": {
+            "Component": "A class, template, and styles that control a view.",
+            "Module (NgModule)": "A container that organizes related components, directives, and pipes.",
+            "Template": "HTML markup that defines a component’s view.",
+            "Metadata": "Configuration attached to classes using decorators.",
+            "Decorator": "A TypeScript feature used to attach metadata to classes.",
+            "Data Binding": "A way to connect component data with the template.",
+            "Interpolation": "A one-way binding that displays data using {{ }}.",
+            "Property Binding": "A one-way binding that sets element or component properties.",
+            "Event Binding": "A one-way binding that listens for events from elements.",
+            "Two-Way Binding": "A binding that updates both the view and the component.",
+            "Directive": "A class that adds behavior to elements.",
+            "Structural Directive": "A directive that changes layout by adding or removing elements.",
+            "Attribute Directive": "A directive that changes the appearance or behavior of an element.",
+            "Pipe": "A class that transforms displayed data in templates.",
+            "Service": "A class that provides reusable logic or data.",
+            "Dependency Injection": "A system that supplies classes with needed services.",
+            "Routing": "A system that maps URLs to components.",
+            "Router Module": "A module that configures and manages routes.",
+            "Observable": "A stream of asynchronous values.",
+            "RxJS": "A library that provides Observables and operators.",
+            "Environment Files": "Files that store configuration values for different builds.",
+            "Assets": "Static files such as images or JSON served with the application.",
+            "Global Styles": "Stylesheets applied across the entire application.",
+            "RouterLinkActive": "A directive that marks active navigation links."
+          }
+        },
+        "intermediate": {
+          "show": "value",
+          "cards": {
+            "Change Detection": "A process that updates the view when data changes.",
+            "Zone.js": "A library that helps Angular detect asynchronous operations.",
+            "Lifecycle Hooks": "Methods that run at specific times in a component’s life.",
+            "ngOnInit": "A lifecycle hook that runs after component initialization.",
+            "ngOnDestroy": "A lifecycle hook that runs just before a component is removed.",
+            "FormsModule": "A module that supports template-driven forms.",
+            "ReactiveFormsModule": "A module that supports reactive forms.",
+            "FormControl": "An object that tracks a single form input’s value and state.",
+            "FormGroup": "An object that groups multiple FormControls.",
+            "Validators": "Functions that check form input rules.",
+            "HttpClient": "A service for making HTTP requests.",
+            "HttpInterceptor": "A class that modifies HTTP requests or responses.",
+            "Input Binding": "A way to pass data from a parent component to a child.",
+            "Output Binding": "A way for a child component to send events to a parent.",
+            "Content Projection": "A way to insert external content into a component’s template.",
+            "ViewChild": "A way to access a single element or component in the view.",
+            "ViewChildren": "A way to access multiple elements or components in the view.",
+            "TemplateRef": "A reference to an embedded template.",
+            "ChangeDetectorRef": "A service that lets you control change detection manually.",
+            "Angular CLI": "A tool for generating, building, and managing Angular projects.",
+            "Route Parameters": "Values passed through the URL to load specific data.",
+            "Query Parameters": "Extra values added to a URL for filtering or state.",
+            "ActivatedRoute": "An object that provides information about the current route.",
+            "HttpHeaders": "An object that sets metadata on HTTP requests.",
+            "HttpParams": "An object that builds query parameters for HTTP requests.",
+            "Async Pipe": "A pipe that subscribes to Observables and displays their values.",
+            "TrackBy Function": "A function that improves rendering performance in lists.",
+            "Router Events": "Notifications about changes during navigation."
+          }
+        },
+        "expert": {
+          "show": "value",
+          "cards": {
+            "Standalone Component": "A component that does not require a module.",
+            "Signal": "A value that notifies Angular when it changes.",
+            "Computed Signal": "A value derived from one or more signals.",
+            "Effect": "A function that runs when signals change.",
+            "Injector Tree": "A structure that determines where services are created.",
+            "Hierarchical DI": "A dependency injection pattern based on nested injectors.",
+            "AOT Compilation": "A build step that converts templates into optimized code.",
+            "Ivy": "Angular’s rendering engine that improves build and runtime performance.",
+            "View Engine": "Angular’s older rendering engine replaced by Ivy.",
+            "Dynamic Component Loading": "Creating components at runtime using Angular APIs.",
+            "Renderer2": "An API for safely manipulating the DOM.",
+            "HostListener": "A decorator that listens to events on the host element.",
+            "HostBinding": "A decorator that binds properties to the host element.",
+            "Custom Pipe": "A user-defined class that transforms data in templates.",
+            "Custom Directive": "A user-defined class that adds behavior to elements.",
+            "Route Guard": "A class that controls navigation decisions.",
+            "Resolver": "A class that loads data before a route activates.",
+            "Lazy Loading": "Loading components or modules only when needed.",
+            "Preloading Strategy": "A rule that determines how lazy-loaded modules are prefetched.",
+            "NgRx": "A library for managing global state using actions and reducers.",
+            "Functional Guard": "A route guard written as a function instead of a class.",
+            "Functional Interceptor": "An HTTP interceptor written as a function.",
+            "Control Flow Syntax": "Template syntax using @if, @for, and @switch.",
+            "Template Variables": "Variables declared inside templates for cleaner logic.",
+            "Signals-based Inputs": "Inputs that use signals instead of bindings.",
+            "DestroyRef": "A reference used to register cleanup logic.",
+            "provideHttpClient": "A function that configures HTTP services for an application.",
+            "provideRouter": "A function that configures routing for an application."
+          }
+        },
+        "mastery": {
+          "show": "value",
+          "cards": {
+            "Server-Side Rendering": "Rendering pages on the server to improve load time and visibility.",
+            "Hydration": "Reusing server-rendered HTML on the client to avoid re-rendering.",
+            "Angular Universal": "Tools that enable server-side rendering and hydration.",
+            "Zone-less Mode": "Running Angular without Zone.js for improved performance.",
+            "Event Replay": "A hydration feature that replays user events after startup.",
+            "Deferred Loading": "Loading components only when they become visible or needed.",
+            "View Transitions": "Smooth page transitions supported by Angular.",
+            "Signals-based Forms": "Forms built using signals instead of form controls.",
+            "Build Optimizations": "Techniques that reduce bundle size and improve performance.",
+            "Bundle Budgeting": "Limits that prevent bundle size from growing too large.",
+            "Standalone Architecture": "Application structure built entirely without modules.",
+            "Feature Shell Architecture": "A pattern that organizes large apps into isolated areas.",
+            "Micro-frontend Integration": "Using Angular inside multi-framework environments.",
+            "Custom Hydration Strategies": "Advanced ways to tune hydration behavior.",
+            "Signals-based State Architecture": "Application state managed entirely with signals.",
+            "ComponentStore": "A lightweight state management pattern for components.",
+            "Performance Profiling": "Analyzing rendering and change detection behavior.",
+            "Internationalization": "Built-in support for multi-language applications.",
+            "SSR Caching": "Storing server-rendered pages for faster responses.",
+            "Edge Rendering": "Running server-side rendering close to users for speed."
+          }
+        }
+      }
+    },
+    "azure-fundamentals": {
+      "cardSets": {
+        "terms": {
+          "show": "value",
+          "cards": {
+            "Cloud Computing": "Delivery of computing services over the internet.",
+            "Public Cloud": "Cloud resources owned and operated by a third-party provider.",
+            "Private Cloud": "Cloud resources used exclusively by one organization.",
+            "Hybrid Cloud": "A mix of public and private cloud environments.",
+            "IaaS": "Cloud model that provides virtual machines and storage.",
+            "PaaS": "Cloud model that provides managed application hosting and tools.",
+            "SaaS": "Cloud model that delivers fully managed applications.",
+            "Scalability": "Ability to increase or decrease resources as needed.",
+            "Elasticity": "Automatic scaling of resources based on demand.",
+            "High Availability": "Ensuring services remain accessible with minimal downtime.",
+            "Azure Portal": "A web-based interface for managing Azure resources.",
+            "Azure Resource Manager": "A system that deploys and manages Azure resources.",
+            "Resource Group": "A container that holds related Azure resources.",
+            "Subscription": "A billing and access boundary for Azure resources.",
+            "Management Group": "A container for organizing multiple subscriptions.",
+            "Region": "A geographic area containing Azure datacenters.",
+            "Availability Zone": "Physically separate datacenters within a region.",
+            "Virtual Machine": "An on-demand computing resource running in Azure.",
+            "Virtual Network": "A private network for Azure resources.",
+            "Subnet": "A segment of a virtual network.",
+            "Network Security Group": "A set of rules that control network traffic.",
+            "Azure Storage Account": "A container for storing data objects in Azure.",
+            "Blob Storage": "Object storage for unstructured data.",
+            "File Storage": "Managed file shares accessible over SMB.",
+            "Queue Storage": "Messaging service for asynchronous communication.",
+            "Table Storage": "NoSQL key-value storage.",
+            "Azure SQL Database": "A managed relational database service.",
+            "Azure Cosmos DB": "A globally distributed NoSQL database service.",
+            "Azure Functions": "A serverless compute service that runs event-driven code.",
+            "App Service": "A platform for hosting web apps and APIs.",
+            "Azure Active Directory": "A cloud identity and access management service.",
+            "Multi-Factor Authentication": "A security method requiring multiple verification steps.",
+            "Role-Based Access Control": "A system that assigns permissions based on roles.",
+            "Azure Policy": "A service that enforces rules across Azure resources.",
+            "Azure Blueprints": "A tool for deploying governed environments.",
+            "Cost Management": "Tools for tracking and optimizing cloud spending.",
+            "Azure Advisor": "A service that provides recommendations for optimization.",
+            "Service Level Agreement": "A contract that defines uptime and performance guarantees.",
+            "Defense in Depth": "A layered approach to security.",
+            "Shared Responsibility Model": "A framework defining security roles between provider and customer."
+          }
+        }
+      }
     }
-  },
-  "cards": [
-    { "question": "a", "answer": "a", "category": "sight-words-grade4", "acceptableTranscripts": ["hey"] },
-    { "question": "about", "answer": "about", "category": "sight-words-grade4" },
-    { "question": "all", "answer": "all", "category": "sight-words-grade4", "acceptableTranscripts": ["call"] },
-    { "question": "am", "answer": "am", "category": "sight-words-grade4", "acceptableTranscripts": ["a.m.", "a m"] },
-    { "question": "an", "answer": "an", "category": "sight-words-grade4" },
-    { "question": "and", "answer": "and", "category": "sight-words-grade4" },
-    { "question": "are", "answer": "are", "category": "sight-words-grade4" },
-    { "question": "as", "answer": "as", "category": "sight-words-grade4" },
-    { "question": "at", "answer": "at", "category": "sight-words-grade4" },
-    { "question": "be", "answer": "be", "category": "sight-words-grade4" },
-    { "question": "been", "answer": "been", "category": "sight-words-grade4" },
-    { "question": "but", "answer": "but", "category": "sight-words-grade4" },
-    { "question": "by", "answer": "by", "category": "sight-words-grade4" },
-    { "question": "called", "answer": "called", "category": "sight-words-grade4" },
-    { "question": "can", "answer": "can", "category": "sight-words-grade4" },
-    { "question": "come", "answer": "come", "category": "sight-words-grade4" },
-    { "question": "could", "answer": "could", "category": "sight-words-grade4" },
-    { "question": "day", "answer": "day", "category": "sight-words-grade4" },
-    { "question": "did", "answer": "did", "category": "sight-words-grade4" },
-    { "question": "do", "answer": "do", "category": "sight-words-grade4" },
-    { "question": "down", "answer": "down", "category": "sight-words-grade4" },
-    { "question": "easy", "answer": "easy", "category": "sight-words-grade4" },
-    { "question": "find", "answer": "find", "category": "sight-words-grade4" },
-    { "question": "first", "answer": "first", "category": "sight-words-grade4" },
-    { "question": "for", "answer": "for", "category": "sight-words-grade4", "acceptableTranscripts": ["four"] },
-    { "question": "from", "answer": "from", "category": "sight-words-grade4" },
-    { "question": "get", "answer": "get", "category": "sight-words-grade4" },
-    { "question": "go", "answer": "go", "category": "sight-words-grade4" },
-    { "question": "had", "answer": "had", "category": "sight-words-grade4" },
-    { "question": "has", "answer": "has", "category": "sight-words-grade4" },
-    { "question": "have", "answer": "have", "category": "sight-words-grade4" },
-    { "question": "he", "answer": "he", "category": "sight-words-grade4" },
-    { "question": "her", "answer": "her", "category": "sight-words-grade4" },
-    { "question": "him", "answer": "him", "category": "sight-words-grade4" },
-    { "question": "his", "answer": "his", "category": "sight-words-grade4" },
-    { "question": "how", "answer": "how", "category": "sight-words-grade4" },
-    { "question": "I", "answer": "I", "category": "sight-words-grade4" },
-    { "question": "if", "answer": "if", "category": "sight-words-grade4" },
-    { "question": "in", "answer": "in", "category": "sight-words-grade4" },
-    { "question": "into", "answer": "into", "category": "sight-words-grade4" },
-    { "question": "is", "answer": "is", "category": "sight-words-grade4" },
-    { "question": "it", "answer": "it", "category": "sight-words-grade4" },
-    { "question": "its like", "answer": "its like", "category": "sight-words-grade4" },
-    { "question": "long", "answer": "long", "category": "sight-words-grade4" },
-    { "question": "look", "answer": "look", "category": "sight-words-grade4" },
-    { "question": "made", "answer": "made", "category": "sight-words-grade4" },
-    { "question": "make", "answer": "make", "category": "sight-words-grade4" },
-    { "question": "many", "answer": "many", "category": "sight-words-grade4" },
-    { "question": "may", "answer": "may", "category": "sight-words-grade4" },
-    { "question": "more", "answer": "more", "category": "sight-words-grade4" },
-    { "question": "my", "answer": "my", "category": "sight-words-grade4" },
-    { "question": "no", "answer": "no", "category": "sight-words-grade4" },
-    { "question": "not", "answer": "not", "category": "sight-words-grade4" },
-    { "question": "now", "answer": "now", "category": "sight-words-grade4" },
-    { "question": "number", "answer": "number", "category": "sight-words-grade4" },
-    { "question": "of", "answer": "of", "category": "sight-words-grade4" },
-    { "question": "on", "answer": "on", "category": "sight-words-grade4" },
-    { "question": "one", "answer": "one", "category": "sight-words-grade4" },
-    { "question": "or", "answer": "or", "category": "sight-words-grade4" },
-    { "question": "other", "answer": "other", "category": "sight-words-grade4" },
-    { "question": "out", "answer": "out", "category": "sight-words-grade4" },
-    { "question": "part", "answer": "part", "category": "sight-words-grade4" },
-    { "question": "people", "answer": "people", "category": "sight-words-grade4" },
-    { "question": "said", "answer": "said", "category": "sight-words-grade4" },
-    { "question": "see", "answer": "see", "category": "sight-words-grade4" },
-    { "question": "she", "answer": "she", "category": "sight-words-grade4" },
-    { "question": "so", "answer": "so", "category": "sight-words-grade4" },
-    { "question": "some", "answer": "some", "category": "sight-words-grade4" },
-    { "question": "than", "answer": "than", "category": "sight-words-grade4" },
-    { "question": "that", "answer": "that", "category": "sight-words-grade4" },
-    { "question": "the", "answer": "the", "category": "sight-words-grade4" },
-    { "question": "their", "answer": "their", "category": "sight-words-grade4" },
-    { "question": "them", "answer": "them", "category": "sight-words-grade4" },
-    { "question": "then", "answer": "then", "category": "sight-words-grade4" },
-    { "question": "there", "answer": "there", "category": "sight-words-grade4" },
-    { "question": "these", "answer": "these", "category": "sight-words-grade4" },
-    { "question": "they", "answer": "they", "category": "sight-words-grade4" },
-    { "question": "this", "answer": "this", "category": "sight-words-grade4" },
-    { "question": "time", "answer": "time", "category": "sight-words-grade4" },
-    { "question": "to", "answer": "to", "category": "sight-words-grade4", "acceptableTranscripts": ["two", "too"] },
-    { "question": "two", "answer": "two", "category": "sight-words-grade4" },
-    { "question": "up", "answer": "up", "category": "sight-words-grade4" },
-    { "question": "use", "answer": "use", "category": "sight-words-grade4" },
-    { "question": "was", "answer": "was", "category": "sight-words-grade4" },
-    { "question": "water", "answer": "water", "category": "sight-words-grade4" },
-    { "question": "way", "answer": "way", "category": "sight-words-grade4" },
-    { "question": "we were", "answer": "we were", "category": "sight-words-grade4" },
-    { "question": "what", "answer": "what", "category": "sight-words-grade4" },
-    { "question": "when", "answer": "when", "category": "sight-words-grade4" },
-    { "question": "which", "answer": "which", "category": "sight-words-grade4" },
-    { "question": "who", "answer": "who", "category": "sight-words-grade4" },
-    { "question": "will", "answer": "will", "category": "sight-words-grade4" },
-    { "question": "with", "answer": "with", "category": "sight-words-grade4" },
-    { "question": "word", "answer": "word", "category": "sight-words-grade4" },
-    { "question": "would", "answer": "would", "category": "sight-words-grade4" },
-    { "question": "write", "answer": "write", "category": "sight-words-grade4" },
-    { "question": "you", "answer": "you", "category": "sight-words-grade4" },
-    { "question": "your", "answer": "your", "category": "sight-words-grade4" },
-    { "question": "2 + 3", "answer": "5", "category": "math-addition-grade4", "acceptedAnswers": ["five"] },
-    { "question": "4 + 4", "answer": "8", "category": "math-addition-grade4", "acceptedAnswers": ["eight"] },
-    { "question": "6 + 3", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "5 + 5", "answer": "10", "category": "math-addition-grade4", "acceptedAnswers": ["ten"] },
-    { "question": "7 + 2", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "8 + 1", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "3 + 6", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "4 + 5", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "2 + 7", "answer": "9", "category": "math-addition-grade4", "acceptedAnswers": ["nine"] },
-    { "question": "10 + 0", "answer": "10", "category": "math-addition-grade4", "acceptedAnswers": ["ten"] },
-    { "question": "3 + 4", "answer": "7", "category": "math-addition-grade4", "acceptedAnswers": ["seven"] },
-    { "question": "5 + 2", "answer": "7", "category": "math-addition-grade4", "acceptedAnswers": ["seven"] },
-    { "question": "6 + 4", "answer": "10", "category": "math-addition-grade4", "acceptedAnswers": ["ten"] },
-    { "question": "9 + 1", "answer": "10", "category": "math-addition-grade4", "acceptedAnswers": ["ten"] },
-    { "question": "What is the basic unit of life?", "answer": "Cell", "category": "science-cells-unit1", "choices": ["Atom", "Cell", "Tissue", "Organ"] },
-    { "question": "Which structure controls what enters and leaves the cell?", "answer": "Cell membrane", "category": "science-cells-unit1", "choices": ["Nucleus", "Cell wall", "Cell membrane", "Cytoplasm"] },
-    { "question": "What part of the cell contains DNA?", "answer": "Nucleus", "category": "science-cells-unit1", "choices": ["Mitochondria", "Nucleus", "Ribosome", "Vacuole"] },
-    { "question": "Which structure is found only in plant cells?", "answer": "Chloroplast", "category": "science-cells-unit1", "choices": ["Cell membrane", "Nucleus", "Chloroplast", "Mitochondria"] },
-    { "question": "What is the job of mitochondria?", "answer": "Produce energy", "category": "science-cells-unit1", "choices": ["Store water", "Make proteins", "Produce energy", "Control the cell"] },
-    { "question": "Which system carries oxygen and nutrients through the body?", "answer": "Circulatory system", "category": "science-human-body-unit2", "choices": ["Digestive system", "Circulatory system", "Nervous system", "Muscular system"] },
-    { "question": "What organ is the main control center of the body?", "answer": "Brain", "category": "science-human-body-unit2", "choices": ["Heart", "Brain", "Stomach", "Lungs"] },
-    { "question": "Which system helps you breathe?", "answer": "Respiratory system", "category": "science-human-body-unit2", "choices": ["Respiratory system", "Digestive system", "Skeletal system", "Immune system"] },
-    { "question": "What is the main function of the skeletal system?", "answer": "Provide structure and support", "category": "science-human-body-unit2", "choices": ["Pump blood", "Break down food", "Provide structure and support", "Send signals"] },
-    { "question": "Which organ pumps blood throughout the body?", "answer": "Heart", "category": "science-human-body-unit2", "choices": ["Brain", "Lungs", "Heart", "Liver"] },
-    { "question": "What carries genetic information?", "answer": "DNA", "category": "science-genetics-unit3", "choices": ["Water", "DNA", "Protein", "Sugar"] },
-    { "question": "A trait that shows up even if only one copy is present is called…", "answer": "Dominant", "category": "science-genetics-unit3", "choices": ["Recessive", "Dominant", "Neutral", "Hidden"] },
-    { "question": "What is a genotype?", "answer": "The genetic makeup", "category": "science-genetics-unit3", "choices": ["Physical appearance", "The genetic makeup", "A learned behavior", "A mutation"] },
-    { "question": "What is a phenotype?", "answer": "The visible trait", "category": "science-genetics-unit3", "choices": ["The genetic code", "The visible trait", "A chromosome", "A recessive gene"] },
-    { "question": "What tool shows possible genetic outcomes?", "answer": "Punnett square", "category": "science-genetics-unit3", "choices": ["Microscope", "Punnett square", "Thermometer", "Graph"] },
-    { "question": "What is evolution?", "answer": "Change in species over time", "category": "science-evolution-unit4", "choices": ["Sudden change in one organism", "Change in species over time", "A natural disaster", "A type of mutation"] },
-    { "question": "What is natural selection?", "answer": "Survival of organisms best suited to the environment", "category": "science-evolution-unit4", "choices": ["Random mating", "Survival of organisms best suited to the environment", "Choosing pets", "A type of fossil"] },
-    { "question": "What are adaptations?", "answer": "Traits that help organisms survive", "category": "science-evolution-unit4", "choices": ["Traits that help organisms survive", "Traits that harm organisms", "Traits learned in school", "Traits caused by weather"] },
-    { "question": "Fossils provide evidence of…", "answer": "Ancient life", "category": "science-evolution-unit4", "choices": ["Weather patterns", "Ancient life", "Modern technology", "Plant growth"] },
-    { "question": "What can cause a species to go extinct?", "answer": "Failure to survive environmental changes", "category": "science-evolution-unit4", "choices": ["Too much food", "Perfect adaptation", "Failure to survive environmental changes", "Extra DNA"] },
-    { "question": "What is an ecosystem?", "answer": "A community of living and nonliving things", "category": "science-environmental-unit5", "choices": ["A single organism", "A group of rocks", "A community of living and nonliving things", "A weather pattern"] },
-    { "question": "What do producers do?", "answer": "Make their own food", "category": "science-environmental-unit5", "choices": ["Eat other animals", "Break down dead matter", "Make their own food", "Hunt prey"] },
-    { "question": "What is a food chain?", "answer": "A path showing how energy moves", "category": "science-environmental-unit5", "choices": ["A list of animals", "A map of the Earth", "A path showing how energy moves", "A type of ecosystem"] },
-    { "question": "Which resource can be replaced naturally?", "answer": "Solar energy", "category": "science-environmental-unit5", "choices": ["Coal", "Oil", "Natural gas", "Solar energy"] },
-    { "question": "What is pollution?", "answer": "Harmful substances in the environment", "category": "science-environmental-unit5", "choices": ["Clean air", "Harmful substances in the environment", "Recycled materials", "Natural resources"] },
-    { "question": "a", "answer": "a", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["a", "à", "e", "i"] },
-    { "question": "bé", "answer": "b", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["b", "d", "p", "v"] },
-    { "question": "cé", "answer": "c", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["c", "s", "k", "ç"] },
-    { "question": "dé", "answer": "d", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["d", "b", "t", "g"] },
-    { "question": "e", "answer": "e", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["e", "i", "a", "é"], "hint": "Its name sounds like the \"u\" in \"fun\"." },
-    { "question": "effe", "answer": "f", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["f", "v", "s", "h"] },
-    { "question": "gé", "answer": "g", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["g", "j", "h", "c"], "hint": "Its name sounds like \"zhay\", close to the English letter J." },
-    { "question": "ache", "answer": "h", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["h", "a", "k", "x"], "hint": "Its name sounds like \"ash\"." },
-    { "question": "i", "answer": "i", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["i", "e", "y", "î"], "hint": "Its name sounds like the English letter E." },
-    { "question": "ji", "answer": "j", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["j", "g", "i", "y"], "hint": "Its name sounds like \"zhee\"." },
-    { "question": "ka", "answer": "k", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["k", "c", "q", "a"] },
-    { "question": "elle", "answer": "l", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["l", "n", "m", "r"] },
-    { "question": "emme", "answer": "m", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["m", "n", "l", "w"] },
-    { "question": "enne", "answer": "n", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["n", "m", "l", "u"] },
-    { "question": "o", "answer": "o", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["o", "u", "a", "ô"] },
-    { "question": "pé", "answer": "p", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["p", "b", "d", "t"] },
-    { "question": "qu", "answer": "q", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["q", "k", "c", "u"], "hint": "Its name rhymes with the French letter U." },
-    { "question": "erre", "answer": "r", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["r", "l", "h", "a"], "hint": "Its name sounds like \"air\"." },
-    { "question": "esse", "answer": "s", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["s", "c", "z", "x"] },
-    { "question": "té", "answer": "t", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["t", "d", "p", "c"] },
-    { "question": "u", "answer": "u", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["u", "o", "w", "ù"], "hint": "Round your lips to say \"oo\", then say \"ee\" without moving them." },
-    { "question": "vé", "answer": "v", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["v", "w", "b", "f"] },
-    { "question": "double vé", "answer": "w", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["w", "v", "u", "y"], "hint": "Its name means \"double V\"." },
-    { "question": "ixe", "answer": "x", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["x", "s", "z", "i"], "hint": "Its name sounds like \"eeks\"." },
-    { "question": "i grec", "answer": "y", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["y", "i", "g", "j"], "hint": "Its name means \"Greek I\"." },
-    { "question": "zède", "answer": "z", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["z", "s", "x", "d"], "hint": "Its name sounds like \"zed\"." },
-    { "question": "e accent aigu", "answer": "é", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["é", "è", "ê", "e"], "hint": "An accent aigu slants up to the right: ´" },
-    { "question": "e accent grave", "answer": "è", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["è", "é", "ê", "e"], "hint": "An accent grave slants down to the right: `" },
-    { "question": "e accent circonflexe", "answer": "ê", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ê", "é", "è", "ë"], "hint": "An accent circonflexe looks like a little hat: ^" },
-    { "question": "e tréma", "answer": "ë", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ë", "ê", "é", "e"], "hint": "A tréma is two dots above the letter: ¨" },
-    { "question": "a accent grave", "answer": "à", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["à", "á", "â", "a"], "hint": "An accent grave slants down to the right: `" },
-    { "question": "a accent circonflexe", "answer": "â", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["â", "à", "a", "ê"], "hint": "An accent circonflexe looks like a little hat: ^" },
-    { "question": "i accent circonflexe", "answer": "î", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["î", "ï", "i", "ê"], "hint": "An accent circonflexe looks like a little hat: ^" },
-    { "question": "i tréma", "answer": "ï", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ï", "î", "i", "ë"], "hint": "A tréma is two dots above the letter: ¨" },
-    { "question": "o accent circonflexe", "answer": "ô", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ô", "o", "ê", "û"], "hint": "An accent circonflexe looks like a little hat: ^" },
-    { "question": "u accent grave", "answer": "ù", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ù", "û", "u", "ü"], "hint": "An accent grave slants down to the right: `" },
-    { "question": "u accent circonflexe", "answer": "û", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["û", "ù", "u", "ü"], "hint": "An accent circonflexe looks like a little hat: ^" },
-    { "question": "c cédille", "answer": "ç", "category": "french-alphabet-unit1", "lang": "fr-FR", "choices": ["ç", "c", "s", "é"], "hint": "A cédille is a little tail under the letter: ¸" },
-    { "question": "How do you say \"red\" in French?", "answer": "rouge", "category": "french-colors-unit3", "choices": ["rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"r\": un ballon ___ (a red ball)." },
-    { "question": "What does \"rouge\" mean?", "answer": "red", "category": "french-colors-unit3", "choices": ["red", "blue", "green", "yellow", "black", "white", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"un ballon rouge\"." },
-    { "question": "What does \"un ballon rouge\" mean?", "answer": "a red ball", "category": "french-colors-unit3", "choices": ["a red ball", "a blue ball", "a green ball", "a yellow ball", "a black ball", "a white ball", "a brown ball", "a gray ball", "an orange ball", "a pink ball", "a purple ball", "a beige ball"], "hint": "The color word is \"rouge\"." },
-    { "question": "How do you say \"blue\" in French?", "answer": "bleu", "category": "french-colors-unit3", "choices": ["bleu", "rouge", "vert", "jaune", "noir", "blanc", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"b\": le ciel est ___ (the sky is blue)." },
-    { "question": "What does \"bleu\" mean?", "answer": "blue", "category": "french-colors-unit3", "choices": ["blue", "red", "green", "yellow", "black", "white", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"le ciel est bleu\"." },
-    { "question": "What does \"le ciel est bleu\" mean?", "answer": "the sky is blue", "category": "french-colors-unit3", "choices": ["the sky is blue", "the sky is red", "the sky is green", "the sky is yellow", "the sky is black", "the sky is white", "the sky is brown", "the sky is gray", "the sky is orange", "the sky is pink", "the sky is purple", "the sky is beige"], "hint": "The color word is \"bleu\"." },
-    { "question": "How do you say \"green\" in French?", "answer": "vert", "category": "french-colors-unit3", "choices": ["vert", "rouge", "bleu", "jaune", "noir", "blanc", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"v\": une feuille ___ (a green leaf)." },
-    { "question": "What does \"vert\" mean?", "answer": "green", "category": "french-colors-unit3", "choices": ["green", "red", "blue", "yellow", "black", "white", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"une feuille verte\"." },
-    { "question": "What does \"une feuille verte\" mean?", "answer": "a green leaf", "category": "french-colors-unit3", "choices": ["a green leaf", "a red leaf", "a blue leaf", "a yellow leaf", "a black leaf", "a white leaf", "a brown leaf", "a gray leaf", "an orange leaf", "a pink leaf", "a purple leaf", "a beige leaf"], "hint": "\"verte\" is \"vert\" + e because \"feuille\" is feminine." },
-    { "question": "How do you say \"yellow\" in French?", "answer": "jaune", "category": "french-colors-unit3", "choices": ["jaune", "rouge", "bleu", "vert", "noir", "blanc", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"j\": un soleil ___ (a yellow sun)." },
-    { "question": "What does \"jaune\" mean?", "answer": "yellow", "category": "french-colors-unit3", "choices": ["yellow", "red", "blue", "green", "black", "white", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"un soleil jaune\"." },
-    { "question": "What does \"un soleil jaune\" mean?", "answer": "a yellow sun", "category": "french-colors-unit3", "choices": ["a yellow sun", "a red sun", "a blue sun", "a green sun", "a black sun", "a white sun", "a brown sun", "a gray sun", "an orange sun", "a pink sun", "a purple sun", "a beige sun"], "hint": "The color word is \"jaune\"." },
-    { "question": "How do you say \"black\" in French?", "answer": "noir", "category": "french-colors-unit3", "choices": ["noir", "rouge", "bleu", "vert", "jaune", "blanc", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"n\": un chat ___ (a black cat)." },
-    { "question": "What does \"noir\" mean?", "answer": "black", "category": "french-colors-unit3", "choices": ["black", "red", "blue", "green", "yellow", "white", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"un chat noir\"." },
-    { "question": "What does \"un chat noir\" mean?", "answer": "a black cat", "category": "french-colors-unit3", "choices": ["a black cat", "a red cat", "a blue cat", "a green cat", "a yellow cat", "a white cat", "a brown cat", "a gray cat", "an orange cat", "a pink cat", "a purple cat", "a beige cat"], "hint": "The color word is \"noir\"." },
-    { "question": "How do you say \"white\" in French?", "answer": "blanc", "category": "french-colors-unit3", "choices": ["blanc", "rouge", "bleu", "vert", "jaune", "noir", "marron", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"b\": une chemise ___ (a white shirt)." },
-    { "question": "What does \"blanc\" mean?", "answer": "white", "category": "french-colors-unit3", "choices": ["white", "red", "blue", "green", "yellow", "black", "brown", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"une chemise blanche\"." },
-    { "question": "What does \"une chemise blanche\" mean?", "answer": "a white shirt", "category": "french-colors-unit3", "choices": ["a white shirt", "a red shirt", "a blue shirt", "a green shirt", "a yellow shirt", "a black shirt", "a brown shirt", "a gray shirt", "an orange shirt", "a pink shirt", "a purple shirt", "a beige shirt"], "hint": "\"blanche\" is the feminine form of \"blanc\" because \"chemise\" is feminine." },
-    { "question": "How do you say \"brown\" in French?", "answer": "marron", "category": "french-colors-unit3", "choices": ["marron", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "gris", "orange", "rose", "violet", "beige"], "hint": "It starts with \"m\": un café ___ (a brown coffee)." },
-    { "question": "What does \"marron\" mean?", "answer": "brown", "category": "french-colors-unit3", "choices": ["brown", "red", "blue", "green", "yellow", "black", "white", "gray", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"un café marron\"." },
-    { "question": "What does \"un café marron\" mean?", "answer": "a brown coffee", "category": "french-colors-unit3", "choices": ["a brown coffee", "a red coffee", "a blue coffee", "a green coffee", "a yellow coffee", "a black coffee", "a white coffee", "a gray coffee", "an orange coffee", "a pink coffee", "a purple coffee", "a beige coffee"], "hint": "The color word is \"marron\"." },
-    { "question": "How do you say \"gray\" in French?", "answer": "gris", "category": "french-colors-unit3", "choices": ["gris", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "orange", "rose", "violet", "beige"], "hint": "It starts with \"g\": un ciel ___ (a gray sky)." },
-    { "question": "What does \"gris\" mean?", "answer": "gray", "category": "french-colors-unit3", "choices": ["gray", "red", "blue", "green", "yellow", "black", "white", "brown", "orange", "pink", "purple", "beige"], "hint": "You'd see it in \"un ciel gris\"." },
-    { "question": "What does \"un ciel gris\" mean?", "answer": "a gray sky", "category": "french-colors-unit3", "choices": ["a gray sky", "a red sky", "a blue sky", "a green sky", "a yellow sky", "a black sky", "a white sky", "a brown sky", "an orange sky", "a pink sky", "a purple sky", "a beige sky"], "hint": "The color word is \"gris\"." },
-    { "question": "How do you say \"orange\" in French?", "answer": "orange", "category": "french-colors-unit3", "choices": ["orange", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "gris", "rose", "violet", "beige"], "hint": "It starts with \"o\": une ___ (an orange fruit)." },
-    { "question": "What does \"orange\" mean?", "answer": "orange", "category": "french-colors-unit3", "choices": ["orange", "red", "blue", "green", "yellow", "black", "white", "brown", "gray", "pink", "purple", "beige"], "hint": "You'd see it in \"une orange\"." },
-    { "question": "What does \"une orange\" mean?", "answer": "an orange fruit", "category": "french-colors-unit3", "choices": ["an orange fruit", "a red fruit", "a blue fruit", "a green fruit", "a yellow fruit", "a black fruit", "a white fruit", "a brown fruit", "a gray fruit", "a pink fruit", "a purple fruit", "a beige fruit"], "hint": "Here \"orange\" is the fruit itself — same word as the color." },
-    { "question": "How do you say \"pink\" in French?", "answer": "rose", "category": "french-colors-unit3", "choices": ["rose", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "gris", "orange", "violet", "beige"], "hint": "It starts with \"r\": une fleur ___ (a pink flower)." },
-    { "question": "What does \"rose\" mean?", "answer": "pink", "category": "french-colors-unit3", "choices": ["pink", "red", "blue", "green", "yellow", "black", "white", "brown", "gray", "orange", "purple", "beige"], "hint": "You'd see it in \"une fleur rose\"." },
-    { "question": "What does \"une fleur rose\" mean?", "answer": "a pink flower", "category": "french-colors-unit3", "choices": ["a pink flower", "a red flower", "a blue flower", "a green flower", "a yellow flower", "a black flower", "a white flower", "a brown flower", "a gray flower", "an orange flower", "a purple flower", "a beige flower"], "hint": "The color word is \"rose\"." },
-    { "question": "How do you say \"purple\" in French?", "answer": "violet", "category": "french-colors-unit3", "choices": ["violet", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "gris", "orange", "rose", "beige"], "hint": "It starts with \"v\": des fleurs ___ (purple flowers)." },
-    { "question": "What does \"violet\" mean?", "answer": "purple", "category": "french-colors-unit3", "choices": ["purple", "red", "blue", "green", "yellow", "black", "white", "brown", "gray", "orange", "pink", "beige"], "hint": "You'd see it in \"des fleurs violettes\"." },
-    { "question": "What does \"des fleurs violettes\" mean?", "answer": "purple flowers", "category": "french-colors-unit3", "choices": ["purple flowers", "red flowers", "blue flowers", "green flowers", "yellow flowers", "black flowers", "white flowers", "brown flowers", "gray flowers", "orange flowers", "pink flowers", "beige flowers"], "hint": "\"violettes\" is \"violet\" made feminine and plural to match \"fleurs\"." },
-    { "question": "How do you say \"beige\" in French?", "answer": "beige", "category": "french-colors-unit3", "choices": ["beige", "rouge", "bleu", "vert", "jaune", "noir", "blanc", "marron", "gris", "orange", "rose", "violet"], "hint": "It starts with \"b\": un canapé ___ (a beige sofa)." },
-    { "question": "What does \"beige\" mean?", "answer": "beige", "category": "french-colors-unit3", "choices": ["beige", "red", "blue", "green", "yellow", "black", "white", "brown", "gray", "orange", "pink", "purple"], "hint": "You'd see it in \"un canapé beige\"." },
-    { "question": "What does \"un canapé beige\" mean?", "answer": "a beige sofa", "category": "french-colors-unit3", "choices": ["a beige sofa", "a red sofa", "a blue sofa", "a green sofa", "a yellow sofa", "a black sofa", "a white sofa", "a brown sofa", "a gray sofa", "an orange sofa", "a pink sofa", "a purple sofa"], "hint": "The color word is \"beige\"." },
-    { "question": "Which country is highlighted?", "answer": "Belize", "category": "geography-north-america-continental", "countryId": "084", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Canada", "category": "geography-north-america-continental", "countryId": "124", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Costa Rica", "category": "geography-north-america-continental", "countryId": "188", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "El Salvador", "category": "geography-north-america-continental", "countryId": "222", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Guatemala", "category": "geography-north-america-continental", "countryId": "320", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Honduras", "category": "geography-north-america-continental", "countryId": "340", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Mexico", "category": "geography-north-america-continental", "countryId": "484", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Nicaragua", "category": "geography-north-america-continental", "countryId": "558", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Panama", "category": "geography-north-america-continental", "countryId": "591", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "United States", "category": "geography-north-america-continental", "countryId": "840", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Antigua and Barbuda", "category": "geography-north-america-islands", "countryId": "028", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Bahamas", "category": "geography-north-america-islands", "countryId": "044", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Barbados", "category": "geography-north-america-islands", "countryId": "052", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Cuba", "category": "geography-north-america-islands", "countryId": "192", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Dominica", "category": "geography-north-america-islands", "countryId": "212", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Dominican Republic", "category": "geography-north-america-islands", "countryId": "214", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Grenada", "category": "geography-north-america-islands", "countryId": "308", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Haiti", "category": "geography-north-america-islands", "countryId": "332", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Jamaica", "category": "geography-north-america-islands", "countryId": "388", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Saint Kitts and Nevis", "category": "geography-north-america-islands", "countryId": "659", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Saint Lucia", "category": "geography-north-america-islands", "countryId": "662", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Saint Vincent and the Grenadines", "category": "geography-north-america-islands", "countryId": "670", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Trinidad and Tobago", "category": "geography-north-america-islands", "countryId": "780", "continent": "north-america" },
-    { "question": "Which country is highlighted?", "answer": "Argentina", "category": "geography-south-america", "countryId": "032", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Bolivia", "category": "geography-south-america", "countryId": "068", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Brazil", "category": "geography-south-america", "countryId": "076", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Chile", "category": "geography-south-america", "countryId": "152", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Colombia", "category": "geography-south-america", "countryId": "170", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Ecuador", "category": "geography-south-america", "countryId": "218", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Guyana", "category": "geography-south-america", "countryId": "328", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Paraguay", "category": "geography-south-america", "countryId": "600", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Peru", "category": "geography-south-america", "countryId": "604", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Suriname", "category": "geography-south-america", "countryId": "740", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Uruguay", "category": "geography-south-america", "countryId": "858", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Venezuela", "category": "geography-south-america", "countryId": "862", "continent": "south-america" },
-    { "question": "Which country is highlighted?", "answer": "Andorra", "category": "geography-europe-west", "countryId": "020", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Austria", "category": "geography-europe-west", "countryId": "040", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Belgium", "category": "geography-europe-west", "countryId": "056", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Denmark", "category": "geography-europe-west", "countryId": "208", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Finland", "category": "geography-europe-west", "countryId": "246", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "France", "category": "geography-europe-west", "countryId": "250", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Germany", "category": "geography-europe-west", "countryId": "276", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Iceland", "category": "geography-europe-west", "countryId": "352", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Ireland", "category": "geography-europe-west", "countryId": "372", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Italy", "category": "geography-europe-west", "countryId": "380", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Liechtenstein", "category": "geography-europe-west", "countryId": "438", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Luxembourg", "category": "geography-europe-west", "countryId": "442", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Malta", "category": "geography-europe-west", "countryId": "470", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Monaco", "category": "geography-europe-west", "countryId": "492", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Netherlands", "category": "geography-europe-west", "countryId": "528", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Norway", "category": "geography-europe-west", "countryId": "578", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Portugal", "category": "geography-europe-west", "countryId": "620", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "San Marino", "category": "geography-europe-west", "countryId": "674", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Spain", "category": "geography-europe-west", "countryId": "724", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Sweden", "category": "geography-europe-west", "countryId": "752", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Switzerland", "category": "geography-europe-west", "countryId": "756", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "United Kingdom", "category": "geography-europe-west", "countryId": "826", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Vatican City", "category": "geography-europe-west", "countryId": "336", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Albania", "category": "geography-europe-east", "countryId": "008", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Belarus", "category": "geography-europe-east", "countryId": "112", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Bosnia and Herzegovina", "category": "geography-europe-east", "countryId": "070", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Bulgaria", "category": "geography-europe-east", "countryId": "100", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Croatia", "category": "geography-europe-east", "countryId": "191", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Cyprus", "category": "geography-europe-east", "countryId": "196", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Czechia", "category": "geography-europe-east", "countryId": "203", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Estonia", "category": "geography-europe-east", "countryId": "233", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Greece", "category": "geography-europe-east", "countryId": "300", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Hungary", "category": "geography-europe-east", "countryId": "348", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Latvia", "category": "geography-europe-east", "countryId": "428", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Lithuania", "category": "geography-europe-east", "countryId": "440", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Moldova", "category": "geography-europe-east", "countryId": "498", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Montenegro", "category": "geography-europe-east", "countryId": "499", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "North Macedonia", "category": "geography-europe-east", "countryId": "807", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Poland", "category": "geography-europe-east", "countryId": "616", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Romania", "category": "geography-europe-east", "countryId": "642", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Russia", "category": "geography-europe-east", "countryId": "643", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Serbia", "category": "geography-europe-east", "countryId": "688", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Slovakia", "category": "geography-europe-east", "countryId": "703", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Slovenia", "category": "geography-europe-east", "countryId": "705", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Ukraine", "category": "geography-europe-east", "countryId": "804", "continent": "europe" },
-    { "question": "Which country is highlighted?", "answer": "Algeria", "category": "geography-africa-north", "countryId": "012", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Burkina Faso", "category": "geography-africa-north", "countryId": "854", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Cabo Verde", "category": "geography-africa-north", "countryId": "132", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Chad", "category": "geography-africa-north", "countryId": "148", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Djibouti", "category": "geography-africa-north", "countryId": "262", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Egypt", "category": "geography-africa-north", "countryId": "818", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Eritrea", "category": "geography-africa-north", "countryId": "232", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Ethiopia", "category": "geography-africa-north", "countryId": "231", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Gambia", "category": "geography-africa-north", "countryId": "270", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Libya", "category": "geography-africa-north", "countryId": "434", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Mali", "category": "geography-africa-north", "countryId": "466", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Mauritania", "category": "geography-africa-north", "countryId": "478", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Morocco", "category": "geography-africa-north", "countryId": "504", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Niger", "category": "geography-africa-north", "countryId": "562", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Senegal", "category": "geography-africa-north", "countryId": "686", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Somalia", "category": "geography-africa-north", "countryId": "706", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Sudan", "category": "geography-africa-north", "countryId": "729", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Tunisia", "category": "geography-africa-north", "countryId": "788", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Benin", "category": "geography-africa-central", "countryId": "204", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Burundi", "category": "geography-africa-central", "countryId": "108", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Cameroon", "category": "geography-africa-central", "countryId": "120", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Central African Republic", "category": "geography-africa-central", "countryId": "140", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Côte d'Ivoire", "category": "geography-africa-central", "countryId": "384", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Democratic Republic of the Congo", "category": "geography-africa-central", "countryId": "180", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Equatorial Guinea", "category": "geography-africa-central", "countryId": "226", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Gabon", "category": "geography-africa-central", "countryId": "266", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Ghana", "category": "geography-africa-central", "countryId": "288", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Guinea", "category": "geography-africa-central", "countryId": "324", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Guinea-Bissau", "category": "geography-africa-central", "countryId": "624", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Kenya", "category": "geography-africa-central", "countryId": "404", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Liberia", "category": "geography-africa-central", "countryId": "430", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Nigeria", "category": "geography-africa-central", "countryId": "566", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Republic of the Congo", "category": "geography-africa-central", "countryId": "178", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Rwanda", "category": "geography-africa-central", "countryId": "646", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "São Tomé and Príncipe", "category": "geography-africa-central", "countryId": "678", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Sierra Leone", "category": "geography-africa-central", "countryId": "694", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "South Sudan", "category": "geography-africa-central", "countryId": "728", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Togo", "category": "geography-africa-central", "countryId": "768", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Uganda", "category": "geography-africa-central", "countryId": "800", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Angola", "category": "geography-africa-south", "countryId": "024", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Botswana", "category": "geography-africa-south", "countryId": "072", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Comoros", "category": "geography-africa-south", "countryId": "174", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Eswatini", "category": "geography-africa-south", "countryId": "748", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Lesotho", "category": "geography-africa-south", "countryId": "426", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Madagascar", "category": "geography-africa-south", "countryId": "450", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Malawi", "category": "geography-africa-south", "countryId": "454", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Mauritius", "category": "geography-africa-south", "countryId": "480", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Mozambique", "category": "geography-africa-south", "countryId": "508", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Namibia", "category": "geography-africa-south", "countryId": "516", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Seychelles", "category": "geography-africa-south", "countryId": "690", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "South Africa", "category": "geography-africa-south", "countryId": "710", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Tanzania", "category": "geography-africa-south", "countryId": "834", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Zambia", "category": "geography-africa-south", "countryId": "894", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Zimbabwe", "category": "geography-africa-south", "countryId": "716", "continent": "africa" },
-    { "question": "Which country is highlighted?", "answer": "Afghanistan", "category": "geography-asia-west", "countryId": "004", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Armenia", "category": "geography-asia-west", "countryId": "051", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Azerbaijan", "category": "geography-asia-west", "countryId": "031", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Bahrain", "category": "geography-asia-west", "countryId": "048", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Georgia", "category": "geography-asia-west", "countryId": "268", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Iran", "category": "geography-asia-west", "countryId": "364", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Iraq", "category": "geography-asia-west", "countryId": "368", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Israel", "category": "geography-asia-west", "countryId": "376", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Jordan", "category": "geography-asia-west", "countryId": "400", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Kazakhstan", "category": "geography-asia-west", "countryId": "398", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Kuwait", "category": "geography-asia-west", "countryId": "414", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Kyrgyzstan", "category": "geography-asia-west", "countryId": "417", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Lebanon", "category": "geography-asia-west", "countryId": "422", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Oman", "category": "geography-asia-west", "countryId": "512", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Pakistan", "category": "geography-asia-west", "countryId": "586", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Palestine", "category": "geography-asia-west", "countryId": "275", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Qatar", "category": "geography-asia-west", "countryId": "634", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Saudi Arabia", "category": "geography-asia-west", "countryId": "682", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Syria", "category": "geography-asia-west", "countryId": "760", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Tajikistan", "category": "geography-asia-west", "countryId": "762", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Turkey", "category": "geography-asia-west", "countryId": "792", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Turkmenistan", "category": "geography-asia-west", "countryId": "795", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "United Arab Emirates", "category": "geography-asia-west", "countryId": "784", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Uzbekistan", "category": "geography-asia-west", "countryId": "860", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Yemen", "category": "geography-asia-west", "countryId": "887", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Bangladesh", "category": "geography-asia-east", "countryId": "050", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Bhutan", "category": "geography-asia-east", "countryId": "064", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Brunei", "category": "geography-asia-east", "countryId": "096", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Cambodia", "category": "geography-asia-east", "countryId": "116", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "China", "category": "geography-asia-east", "countryId": "156", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "India", "category": "geography-asia-east", "countryId": "356", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Indonesia", "category": "geography-asia-east", "countryId": "360", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Japan", "category": "geography-asia-east", "countryId": "392", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Laos", "category": "geography-asia-east", "countryId": "418", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Malaysia", "category": "geography-asia-east", "countryId": "458", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Maldives", "category": "geography-asia-east", "countryId": "462", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Mongolia", "category": "geography-asia-east", "countryId": "496", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Myanmar", "category": "geography-asia-east", "countryId": "104", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Nepal", "category": "geography-asia-east", "countryId": "524", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "North Korea", "category": "geography-asia-east", "countryId": "408", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Philippines", "category": "geography-asia-east", "countryId": "608", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Singapore", "category": "geography-asia-east", "countryId": "702", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "South Korea", "category": "geography-asia-east", "countryId": "410", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Sri Lanka", "category": "geography-asia-east", "countryId": "144", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Thailand", "category": "geography-asia-east", "countryId": "764", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Timor-Leste", "category": "geography-asia-east", "countryId": "626", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Vietnam", "category": "geography-asia-east", "countryId": "704", "continent": "asia" },
-    { "question": "Which country is highlighted?", "answer": "Australia", "category": "geography-oceania", "countryId": "036", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Fiji", "category": "geography-oceania", "countryId": "242", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Kiribati", "category": "geography-oceania", "countryId": "296", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Marshall Islands", "category": "geography-oceania", "countryId": "584", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Micronesia", "category": "geography-oceania", "countryId": "583", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Nauru", "category": "geography-oceania", "countryId": "520", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "New Zealand", "category": "geography-oceania", "countryId": "554", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Palau", "category": "geography-oceania", "countryId": "585", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Papua New Guinea", "category": "geography-oceania", "countryId": "598", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Samoa", "category": "geography-oceania", "countryId": "882", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Solomon Islands", "category": "geography-oceania", "countryId": "090", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Tonga", "category": "geography-oceania", "countryId": "776", "continent": "oceania" },
-    { "question": "Which country is highlighted?", "answer": "Vanuatu", "category": "geography-oceania", "countryId": "548", "continent": "oceania" },
-    { "question": "9 - 2", "answer": "7", "category": "math-subtraction", "acceptedAnswers": ["seven"] },
-    { "question": "10 - 3", "answer": "7", "category": "math-subtraction", "acceptedAnswers": ["seven"] },
-    { "question": "2 x 3", "answer": "6", "category": "math-multiplication", "acceptedAnswers": ["six"] },
-    { "question": "4 x 2", "answer": "8", "category": "math-multiplication", "acceptedAnswers": ["eight"] },
-    { "question": "house", "answer": "house", "category": "vocabulary-grade3", "choices": ["house", "horse", "mouse", "hose"], "hint": "We live in a big blue ___." },
-    { "question": "friend", "answer": "friend", "category": "vocabulary-grade3", "choices": ["friend", "fried", "front", "find"], "hint": "My best ___ sits next to me at lunch." },
-    { "question": "light", "answer": "light", "category": "vocabulary-grade3", "choices": ["light", "night", "lift", "tight"], "hint": "Turn on the ___ so we can see." },
-    { "question": "were", "answer": "were", "category": "vocabulary-grade3", "choices": ["were", "where", "wore", "here"], "hint": "We ___ at the park all day." },
-    { "question": "quiet", "answer": "quiet", "category": "vocabulary-grade4", "choices": ["quiet", "quite", "quit", "quilt"], "hint": "Please be ___ in the library." },
-    { "question": "through", "answer": "through", "category": "vocabulary-grade4", "choices": ["through", "though", "thorough", "tough"], "hint": "The train went ___ the tunnel." },
-    { "question": "breathe", "answer": "breathe", "category": "vocabulary-grade4", "choices": ["breathe", "breath", "bathe", "breeze"], "hint": "Fish ___ underwater with their gills." },
-    { "question": "lose", "answer": "lose", "category": "vocabulary-grade4", "choices": ["lose", "loose", "close", "lost"], "hint": "Don't ___ your library card." }
-  ]
+  }
 }
