@@ -393,11 +393,20 @@
             "units": [
               {
                 "title": "Alphabet",
-                "deck": {
-                  "unit": "alphabet",
-                  "description": "Hear a letter said in French, then pick it, accents included. {count} letters.",
-                  "build": { "type": "cards", "sets": ["letters", "accented-letters"], "listen": true }
-                }
+                "decks": [
+                  {
+                    "unit": "letters",
+                    "title": "Standard Letters",
+                    "description": "Hear a letter said in French, then pick it. {count} letters, A to Z.",
+                    "build": { "type": "cards", "sets": ["letters"], "listen": true }
+                  },
+                  {
+                    "unit": "accented-letters",
+                    "title": "Accented Letters",
+                    "description": "Hear an accented letter said in French, then pick it from other accented letters. {count} letters.",
+                    "build": { "type": "cards", "sets": ["accented-letters"], "listen": true }
+                  }
+                ]
               },
               "Communication",
               {
@@ -523,6 +532,7 @@
       {
         "grade": "computer-science",
         "label": "Computer Science",
+        "shortLabel": "CS",
         "color": "blue",
         "pickSubject": true,
         "subjects": [
